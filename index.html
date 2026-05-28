@@ -13,8 +13,7 @@
     <meta property="og:type" content="website"/>
     <meta property="og:site_name" content="Statistics for Strava"/>
     <meta property="og:title" content="Statistics for Strava - A self-hosted dashboard for your Strava data"/>
-    <meta property="og:description"
-          content="A self-hosted dashboard that turns every workout into beautiful charts, deep insights and stats that actually make sense without handing anything over to a third party."/>
+    <meta property="og:description" content="A self-hosted dashboard that turns every workout into beautiful charts, deep insights and stats that actually make sense without handing anything over to a third party."/>
     <meta property="og:url" content="https://getsfs.app/"/>
 
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -85,9 +84,8 @@
             </div>
         </div>
     </header>
-    <div class="bg-white">
-        <section class="max-w-6xl mx-auto px-4 sm:px-5 pt-10 pb-14 md:pt-14 md:pb-20">
-            <div class="max-w-3xl mx-auto text-center">
+    <section class="bg-white max-w-6xl mx-auto px-4 sm:px-5 pt-10 pb-14 md:pt-14 md:pb-20">
+        <div class="max-w-3xl mx-auto text-center">
                 <span class="inline-flex items-center gap-1.5 text-xxs font-bold uppercase tracking-widest text-strava-orange bg-strava-orange-soft px-2.5 py-1 rounded-full">
                   Open source
                   <span class="size-0.5 rounded-full bg-strava-orange"></span>
@@ -95,36 +93,151 @@
                   <span class="size-0.5 rounded-full bg-strava-orange"></span>
                   Free forever
                 </span>
-                <h1 class="mt-4 text-[1.75rem] sm:text-3xl md:text-4xl font-black text-gray-900 leading-[1.1] tracking-tight max-w-4xl mx-auto">
-                    Every ride. Every run. Every workout.<br/>
-                    All <span class="text-strava-orange">yours</span>.
-                </h1>
-                <p class="mt-4 sm:mt-5 text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
-                    A self-hosted dashboard that turns every workout into beautiful charts, deep insights and stats that
-                    actually make sense without handing anything over to a third party.
-                </p>
-                <div class="mt-6 sm:mt-7 flex flex-wrap items-center justify-center gap-3">
-                    <a href="https://docs.getsfs.app" class="inline-flex items-center gap-2 text-sm font-semibold bg-strava-orange text-white px-5 py-3 rounded-md hover:bg-orange-600 transition">
-                        Get started
-                        <svg class="size-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 5l7 7-7 7"/>
-                        </svg>
-                    </a>
-                    <a href="https://demo.stats-for-strava.com" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-sm font-semibold text-gray-800 px-5 py-3 rounded-md border border-gray-300 hover:border-strava-orange/50 hover:bg-gray-50 transition">
-                        Try the live demo
-                        <svg class="size-3.5 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4M14 4h6m0 0v6m0-6L10 14"/>
-                        </svg>
-                    </a>
-                </div>
-                <p class="mt-4 text-xxs text-gray-400 italic">An independent open-source project. Not affiliated with or endorsed by Strava Inc.</p>
+            <h1 class="mt-4 text-[1.75rem] sm:text-3xl md:text-4xl font-black text-gray-900 leading-[1.1] tracking-tight max-w-4xl mx-auto">
+                Every ride. Every run. Every workout.<br/>
+                All <span class="text-strava-orange">yours</span>.
+            </h1>
+            <p class="mt-4 sm:mt-5 text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
+                A self-hosted dashboard that turns every workout into beautiful charts, deep insights and stats that
+                actually make sense without handing anything over to a third party.
+            </p>
+            <div class="mt-6 sm:mt-7 flex flex-wrap items-center justify-center gap-3">
+                <a href="https://docs.getsfs.app" class="inline-flex items-center gap-2 text-sm font-semibold bg-strava-orange text-white px-5 py-3 rounded-md hover:bg-orange-600 transition">
+                    Get started
+                    <svg class="size-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 5l7 7-7 7"/>
+                    </svg>
+                </a>
+                <a href="https://demo.stats-for-strava.com" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-sm font-semibold text-gray-800 px-5 py-3 rounded-md border border-gray-300 hover:border-strava-orange/50 hover:bg-gray-50 transition">
+                    Try the live demo
+                    <svg class="size-3.5 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                    </svg>
+                </a>
             </div>
-            <div class="mt-12 md:mt-16">
-                <div class="overflow-hidden rounded-lg border border-gray-200 shadow-2xl">
-                    <img src="assets/hero.png" alt="Statistics for Strava dashboard" class="block w-full h-auto"/>
+            <p class="mt-4 text-xxs text-gray-400 italic">An independent open-source project. Not affiliated with or endorsed by Strava Inc.</p>
+        </div>
+        <div class="mt-12 md:mt-16">
+            <div class="overflow-hidden rounded-lg border border-gray-200 shadow-2xl">
+                <img src="assets/hero.png" alt="Statistics for Strava dashboard" class="block w-full h-auto"/>
+            </div>
+        </div>
+    </section>
+    <section id="features" class="max-w-6xl mx-auto px-4 sm:px-5 py-14 md:py-20">
+        <div class="max-w-2xl">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight">Built for athletes who like the details.</h2>
+            <p class="mt-3 text-gray-600">From a high-level dashboard down to per-segment splits, and everything in between.</p>
+        </div>
+        <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="bg-white border border-gray-200 rounded-[14px] p-[18px]">
+                <div class="size-9 inline-flex items-center justify-center rounded-[9px] bg-strava-orange-soft text-strava-orange mb-2.5">
+                    <svg class="size-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.143 4H4.857A.857.857 0 0 0 4 4.857v4.286c0 .473.384.857.857.857h4.286A.857.857 0 0 0 10 9.143V4.857A.857.857 0 0 0 9.143 4Zm10 0h-4.286a.857.857 0 0 0-.857.857v4.286c0 .473.384.857.857.857h4.286A.857.857 0 0 0 20 9.143V4.857A.857.857 0 0 0 19.143 4Zm-10 10H4.857a.857.857 0 0 0-.857.857v4.286c0 .473.384.857.857.857h4.286a.857.857 0 0 0 .857-.857v-4.286A.857.857 0 0 0 9.143 14Zm10 0h-4.286a.857.857 0 0 0-.857.857v4.286c0 .473.384.857.857.857h4.286a.857.857 0 0 0 .857-.857v-4.286a.857.857 0 0 0-.857-.857Z"/></svg>
+                </div>
+                <h3 class="font-bold text-gray-900">Dashboard</h3>
+                <p class="mt-1 text-sm text-gray-600">Every stat, chart and trend at a glance.</p>
+            </div>
+            <div class="bg-white border border-gray-200 rounded-[14px] p-[18px]">
+                <div class="size-9 inline-flex items-center justify-center rounded-[9px] bg-strava-orange-soft text-strava-orange mb-2.5">
+                    <svg class="size-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4.5V19a1 1 0 0 0 1 1h15M7 14l4-4 4 4 5-5m0 0h-3.207M20 9v3.207"/></svg>
+                </div>
+                <h3 class="font-bold text-gray-900">Eddington number</h3>
+                <p class="mt-1 text-sm text-gray-600">Track your distance milestones and see how close you are to the next.</p>
+            </div>
+            <div class="bg-white border border-gray-200 rounded-[14px] p-[18px]">
+                <div class="size-9 inline-flex items-center justify-center rounded-[9px] bg-strava-orange-soft text-strava-orange mb-2.5">
+                    <svg class="size-5" fill="currentColor" viewBox="0 0 256 256"><path d="M217.45557,38.544a35.9967,35.9967,0,0,0-57.937,40.96679L79.5105,159.51855a36.05906,36.05906,0,0,0-40.96607,7.0254H38.544a36.00029,36.00029,0,1,0,57.93737,9.94531L176.4895,96.48145A35.99663,35.99663,0,0,0,217.45557,38.544Z"/></svg>
+                </div>
+                <h3 class="font-bold text-gray-900">Segments & efforts</h3>
+                <p class="mt-1 text-sm text-gray-600">Dive into your segment history, KOMs and personal bests with rich filtering.</p>
+            </div>
+            <div class="bg-white border border-gray-200 rounded-[14px] p-[18px]">
+                <div class="size-9 inline-flex items-center justify-center rounded-[9px] bg-strava-orange-soft text-strava-orange mb-2.5">
+                    <svg class="size-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linejoin="round" d="M3 8.7C3 7.2 3 6.5 3.4 6.1c.1-.2.3-.3.5-.4.5-.2 1.2 0 2.6.5 1.1.3 1.6.5 2.1.5.2 0 .4 0 .6-.1.5-.1 1-.4 2-1l1.4-1c1.2-.8 1.8-1.2 2.5-1.3.7-.1 1.4.1 2.7.6l1.2.4c1 .3 1.5.5 1.8.9.3.4.3.9.3 1.9v8.2c0 1.5 0 2.2-.4 2.7-.1.1-.3.2-.5.3-.5.3-1.2 0-2.7-.5-1-.3-1.6-.5-2.1-.5-.2 0-.4 0-.6.1-.5.1-1 .4-1.9 1l-1.4 1c-1.2.7-1.8 1.1-2.4 1.2-.7.1-1.4-.1-2.8-.5l-1.1-.4c-1-.3-1.5-.5-1.8-.9C3 17.4 3 16.9 3 15.8V8.7z"/></svg>
+                </div>
+                <h3 class="font-bold text-gray-900">Heatmap</h3>
+                <p class="mt-1 text-sm text-gray-600">A world map of every kilometre you've ever covered, anywhere you've been.</p>
+            </div>
+            <div class="bg-white border border-gray-200 rounded-[14px] p-[18px]">
+                <div class="size-9 inline-flex items-center justify-center rounded-[9px] bg-strava-orange-soft text-strava-orange mb-2.5">
+                    <svg class="size-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 10h16m-8-3V4M7 7V4m10 3V4M5 20h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z"/></svg>
+                </div>
+                <h3 class="font-bold text-gray-900">Monthly view</h3>
+                <p class="mt-1 text-sm text-gray-600">Interactive calendar with month-by-month totals, sport breakdowns and trends.</p>
+            </div>
+            <div class="bg-white border border-gray-200 rounded-[14px] p-[18px]">
+                <div class="size-9 inline-flex items-center justify-center rounded-[9px] bg-strava-orange-soft text-strava-orange mb-2.5">
+                    <svg class="size-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m10.05 8.1-3.78.3-1.99 2a.94.94 0 0 0 .53 1.6l2.7.3m8.39 1.6-.32 3.8-2 2a.94.94 0 0 1-1.59-.5l-.4-2.7m8.16-11.2a1.37 1.37 0 0 0-1.12-1.12c-1.61-.28-4.9-.62-6.38.85-1.67 1.67-5.21 8.02-6.31 10.02a.93.93 0 0 0 .16 1.11l1.66 1.67c.31.31.77.37 1.11.16 2.01-1.1 8.35-4.64 10.02-6.31 1.48-1.48 1.13-4.77.86-6.38Z"/></svg>
+                </div>
+                <h3 class="font-bold text-gray-900">Gear & maintenance</h3>
+                <p class="mt-1 text-sm text-gray-600">Track wear on every bike, shoe and component. Get reminded when service is due.</p>
+            </div>
+            <div class="bg-white border border-gray-200 rounded-[14px] p-[18px]">
+                <div class="size-9 inline-flex items-center justify-center rounded-[9px] bg-strava-orange-soft text-strava-orange mb-2.5">
+                    <svg class="size-5" fill="currentColor" viewBox="0 0 24 24"><path d="M21,4H18V3a1,1,0,0,0-1-1H7A1,1,0,0,0,6,3V4H3A1,1,0,0,0,2,5V8a4,4,0,0,0,4,4H7.54A6,6,0,0,0,11,13.91V16H10a3,3,0,0,0-3,3v2a1,1,0,0,0,1,1h8a1,1,0,0,0,1-1V19a3,3,0,0,0-3-3H13V13.91A6,6,0,0,0,16.46,12H18a4,4,0,0,0,4-4V5A1,1,0,0,0,21,4Z"/></svg>
+                </div>
+                <h3 class="font-bold text-gray-900">Best efforts</h3>
+                <p class="mt-1 text-sm text-gray-600">Your fastest 5k, 10k, 50k, 100k and beyond across every sport you do.</p>
+            </div>
+            <div class="bg-white border border-gray-200 rounded-[14px] p-[18px]">
+                <div class="size-9 inline-flex items-center justify-center rounded-[9px] bg-strava-orange-soft text-strava-orange mb-2.5">
+                    <svg class="size-5" fill="currentColor" viewBox="0 -960 960 960"><path d="M80-200v-80h240v-240h240v-240h320v80H640v240H400v240H80Z"/></svg>
+                </div>
+                <h3 class="font-bold text-gray-900">Milestones & rewind</h3>
+                <p class="mt-1 text-sm text-gray-600">A timeline of your achievements, plus a yearly Rewind to look back on it all.</p>
+            </div>
+            <div class="bg-white border border-gray-200 rounded-[14px] p-[18px]">
+                <div class="size-9 inline-flex items-center justify-center rounded-[9px] bg-strava-orange-soft text-strava-orange mb-2.5">
+                    <svg class="size-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 9h8M8 13h6m-2 8a9 9 0 1 1 0-18 9 9 0 0 1 0 18Z"/></svg>
+                </div>
+                <h3 class="font-bold text-gray-900">AI workout assistant</h3>
+                <p class="mt-1 text-sm text-gray-600">Personalised workout suggestions and insights powered by your own data.</p>
+            </div>
+        </div>
+    </section>
+    <section id="preview" class="bg-gray-50 border-y border-gray-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-5 py-14 md:py-20">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight">A few practical things.</h2>
+                    <ul class="mt-6 space-y-3 text-sm">
+                        <li class="flex items-start gap-3">
+                            <span class="mt-0.5 inline-flex items-center justify-center size-5 rounded-full bg-strava-orange-soft text-strava-orange">
+                              <svg class="size-3" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m5 12 5 5L20 7"/></svg>
+                            </span>
+                            <span><span class="font-semibold text-gray-900">All your sports.</span> Ride, run, swim, hike, ski. Even Zwift worlds get their own breakdown.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="mt-0.5 inline-flex items-center justify-center size-5 rounded-full bg-strava-orange-soft text-strava-orange">
+                              <svg class="size-3" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m5 12 5 5L20 7"/></svg>
+                            </span>
+                            <span><span class="font-semibold text-gray-900">Light & dark theme.</span> Picks your system preference and remembers it.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="mt-0.5 inline-flex items-center justify-center size-5 rounded-full bg-strava-orange-soft text-strava-orange">
+                              <svg class="size-3" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m5 12 5 5L20 7"/></svg>
+                            </span>
+                            <span><span class="font-semibold text-gray-900">Translated.</span> English, Nederlands, Deutsch, Français, Italiano, Português, Español and more.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="mt-0.5 inline-flex items-center justify-center size-5 rounded-full bg-strava-orange-soft text-strava-orange">
+                              <svg class="size-3" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m5 12 5 5L20 7"/></svg>
+                            </span>
+                            <span><span class="font-semibold text-gray-900">Mobile-ready.</span> Install as a PWA and use it like a native app.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="relative w-full aspect-[6/5] rounded-lg border border-gray-200 overflow-hidden shadow-xl select-none" style="--pos: 50%">
+                    <img src="assets/dark-mode.png?" alt="dark mode" class="absolute inset-0 w-full h-full object-cover pointer-events-none"/>
+                    <img src="assets/light-mode.png?" alt="light mode" class="absolute inset-0 w-full h-full object-cover pointer-events-none" style="clip-path: inset(0 calc(100% - var(--pos)) 0 0)"/>
+                    <div class="absolute inset-y-0 w-0.5 bg-white pointer-events-none shadow-[0_0_0_1px_rgba(0,0,0,0.08)]" style="left: var(--pos); transform: translateX(-50%)">
+                        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-9 rounded-full bg-white shadow-md flex items-center justify-center">
+                            <svg class="size-4 text-gray-700" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 7l-4 5 4 5M15 7l4 5-4 5"/></svg>
+                        </div>
+                    </div>
+                    <input type="range" min="0" max="100" value="50" step="0.1" aria-label="Drag to compare light and dark mode" class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize" oninput="this.parentElement.style.setProperty('--pos', this.value + '%')"/>
                 </div>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
 </body>
 </html>
