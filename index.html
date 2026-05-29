@@ -381,6 +381,7 @@ $ <span class="text-orange-400">docker</span> compose up
                 titleTarget = '[data-preview-title-target]',
                 imageTarget = '[data-preview-image-target]',
                 closeTarget = '[data-close-preview]',
+                loadingSrc = 'assets/feature-loading.svg',
             } = {}) {
                 this.dialog = typeof dialog === 'string' ? document.querySelector(dialog) : dialog;
                 this.supported = !!this.dialog && typeof this.dialog.showModal === 'function';
@@ -388,6 +389,8 @@ $ <span class="text-orange-400">docker</span> compose up
 
                 this.titleEl = this.dialog.querySelector(titleTarget);
                 this.imageEl = this.dialog.querySelector(imageTarget);
+                this.loadingSrc = loadingSrc;
+                this.requestId = 0;
 
                 document.querySelectorAll(triggers).forEach((trigger) => {
                     trigger.addEventListener('click', () => this.open(trigger.dataset));
@@ -405,10 +408,24 @@ $ <span class="text-orange-400">docker</span> compose up
             open({ previewTitle = '', previewSrc = '' } = {}) {
                 if (!this.supported) return;
                 if (this.titleEl) this.titleEl.textContent = previewTitle;
+
                 if (this.imageEl) {
-                    this.imageEl.src = previewSrc;
                     this.imageEl.alt = previewTitle ? `${previewTitle} preview` : '';
+                    // Reset to the loading state immediately so the previously
+                    // opened preview never flashes while the new image downloads.
+                    this.imageEl.src = this.loadingSrc;
+
+                    if (previewSrc) {
+                        const requestId = ++this.requestId;
+                        const preloader = new Image();
+                        preloader.onload = () => {
+                            // Ignore if another preview was opened in the meantime.
+                            if (requestId === this.requestId) this.imageEl.src = previewSrc;
+                        };
+                        preloader.src = previewSrc;
+                    }
                 }
+
                 this.dialog.showModal();
             }
 
