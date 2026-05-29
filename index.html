@@ -22,7 +22,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
-    <link href="dist/app.min.css?v=ff946133" rel="stylesheet"/>
+    <link href="dist/app.min.css?v=c452830a" rel="stylesheet"/>
     <script defer src="https://analytics.robiningelbrecht.be/script.js" data-website-id="38bb383d-32cf-4d59-aaa2-b6eceaa245e2" data-domains="getsfs.app"></script>
 </head>
 <body class="font-sans bg-white text-gray-900">
@@ -209,9 +209,18 @@
 
         <!-- Single feature preview dialog. Title + image are populated from the clicked card's data-preview-* attributes. -->
         <dialog id="feature-preview" aria-labelledby="feature-preview-title" class="m-auto w-full max-w-3xl p-0 bg-white rounded-xl shadow-2xl overflow-hidden backdrop:bg-gray-900/70 backdrop:backdrop-blur-sm">
-            <div class="flex items-center justify-between gap-3 px-4 py-3 border-b border-gray-200">
-                <h3 id="feature-preview-title" data-preview-title-target class="font-bold text-gray-900"></h3>
-                <button type="button" data-close-preview class="inline-flex items-center justify-center size-8 -mr-1 rounded-md text-gray-400 hover:bg-gray-100 hover:text-gray-700 transition cursor-pointer" aria-label="Close preview">
+            <div class="flex items-center gap-3 px-3.5 py-2.5 border-b border-gray-200 bg-gradient-to-b from-gray-50 to-gray-100/70">
+                <div class="flex gap-1.5 shrink-0">
+                    <span class="size-2.5 rounded-full bg-[#ff5f57]"></span>
+                    <span class="size-2.5 rounded-full bg-[#febc2e]"></span>
+                    <span class="size-2.5 rounded-full bg-[#28c840]"></span>
+                </div>
+                <h3 id="feature-preview-title" data-preview-title-target class="sr-only"></h3>
+                <div class="flex-1 min-w-0 flex items-center justify-center gap-1.5 text-[11px] font-semibold text-gray-400">
+                    <svg class="size-3 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 0 0 2-2v-6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2Zm10-10V7a4 4 0 0 0-8 0v4h8Z"/></svg>
+                    <span class="truncate">demo.getsfs.app</span>
+                </div>
+                <button type="button" data-close-preview class="shrink-0 inline-flex items-center justify-center size-7 -mr-1 rounded-md text-gray-400 hover:bg-gray-200/70 hover:text-gray-700 transition cursor-pointer" aria-label="Close preview">
                     <svg class="size-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/></svg>
                 </button>
             </div>
