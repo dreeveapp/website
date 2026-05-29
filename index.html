@@ -22,7 +22,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
-    <link href="dist/app.min.css?v=98da14cf" rel="stylesheet"/>
+    <link href="dist/app.min.css?v=7ca6de69" rel="stylesheet"/>
     <script defer src="https://analytics.robiningelbrecht.be/script.js" data-website-id="38bb383d-32cf-4d59-aaa2-b6eceaa245e2" data-domains="getsfs.app"></script>
 </head>
 <body class="font-sans bg-white text-gray-900">
@@ -229,6 +229,10 @@
                             <span><span class="font-semibold text-gray-900">Mobile-ready.</span> Install as a PWA and use it like a native app.</span>
                         </li>
                     </ul>
+                    <p class="mt-6 inline-flex items-center gap-1.5 text-xxs font-semibold text-gray-400">
+                        <svg class="size-3.5 text-strava-orange" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 7l-4 5 4 5M15 7l4 5-4 5"/></svg>
+                        Drag the slider to compare light &amp; dark
+                    </p>
                 </div>
                 <div class="relative w-full aspect-[6/5] rounded-lg border border-gray-200 overflow-hidden shadow-xl select-none" style="--pos: 50%">
                     <img src="assets/dark-mode.png?" alt="dark mode" class="absolute inset-0 w-full h-full object-cover pointer-events-none"/>
@@ -268,19 +272,26 @@
                 </p>
             </div>
             <div class="hidden lg:block">
-                <div class="font-mono bg-[#212730] text-gray-200 rounded-[10px] px-4 py-3.5 text-[13px] leading-[1.6] overflow-x-auto whitespace-pre shadow-xl">
-    <span class="text-gray-500"># create a directory for the app</span>
-    $ <span class="text-orange-400">mkdir</span> statistics-for-strava &amp;&amp; <span
-        class="text-orange-400">cd</span> statistics-for-strava
+                <div class="rounded-xl overflow-hidden shadow-[0_30px_60px_-28px_rgba(17,24,39,0.55)]">
+                    <div class="flex items-center gap-2.5 px-3.5 py-2.5 bg-[#1a1f27] border-b border-white/5">
+                        <div class="flex gap-1.5">
+                            <span class="size-2.5 rounded-full bg-[#ff5f57]"></span>
+                            <span class="size-2.5 rounded-full bg-[#febc2e]"></span>
+                            <span class="size-2.5 rounded-full bg-[#28c840]"></span>
+                        </div>
+                        <span class="text-[11px] font-semibold text-gray-500 font-mono">bash — statistics-for-strava</span>
+                    </div>
+                    <div class="font-mono bg-[#212730] text-gray-200 px-4 py-3.5 text-[12px] sm:text-[13px] leading-[1.7] overflow-x-auto whitespace-pre"><span class="text-gray-500"># create a directory for the app</span>
+$ <span class="text-orange-400">mkdir</span> statistics-for-strava &amp;&amp; <span class="text-orange-400">cd</span> statistics-for-strava
 
-    <span class="text-gray-500"># drop in docker-compose.yml, .env and config.yaml</span>
-    <span class="text-gray-500"># (copy the examples from the docs)</span>
+<span class="text-gray-500"># drop in docker-compose.yml, .env and config.yaml</span>
+<span class="text-gray-500"># (copy the examples from the docs)</span>
 
-    <span class="text-gray-500"># spin it up</span>
-    $ <span class="text-orange-400">docker</span> compose up
+<span class="text-gray-500"># spin it up</span>
+$ <span class="text-orange-400">docker</span> compose up
 
-    <span class="text-gray-500"># open the dashboard</span>
-    <span class="text-orange-400">→</span> http://localhost:8080
+<span class="text-gray-500"># open the dashboard</span>
+<span class="text-orange-400">→</span> http://localhost:8080<span class="inline-block w-2 h-[1.05em] bg-[#f3915f] align-text-bottom ml-0.5 animate-pulse"></span></div>
                 </div>
                 <div class="mt-3 flex items-center justify-end text-xxs text-gray-500">
                     <a href="https://docs.getsfs.app/#/getting-started/installation" class="font-semibold text-strava-orange hover:underline">Full instructions →</a>
