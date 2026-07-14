@@ -4,6 +4,7 @@
     "build": "npm run tailwind && bash scripts/cachebust.sh"
   },
   "devDependencies": {
-    "tailwindcss": "^4.3.0"
+    "tailwindcss": "^4.3.2",
+    "@tailwindcss/cli": "^4.3.2"
   }
 }
