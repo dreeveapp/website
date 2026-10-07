@@ -9,7 +9,7 @@
     }
 
     .check-badge {
-        @apply mt-0.5 inline-flex items-center justify-center size-5 rounded-full
+        @apply mt-0.5 shrink-0 inline-flex items-center justify-center size-5 rounded-full
                bg-strava-orange-soft text-strava-orange;
     }
 }
