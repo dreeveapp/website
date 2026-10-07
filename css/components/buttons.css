@@ -35,4 +35,8 @@
     .btn-nav-dark {
         @apply bg-gray-900 text-white hover:bg-gray-800;
     }
+
+    .btn-nav-stars {
+        @apply inline-flex items-center gap-1 ml-0.5 pl-2 border-l border-white/20 tabular-nums;
+    }
 }

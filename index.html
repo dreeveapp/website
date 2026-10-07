@@ -22,23 +22,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
-    <link href="dist/app.min.css?v=598baf7c" rel="stylesheet"/>
+    <link href="dist/app.min.css?v=7d967063" rel="stylesheet"/>
     <script defer src="https://analytics.robiningelbrecht.be/script.js" data-website-id="38bb383d-32cf-4d59-aaa2-b6eceaa245e2" data-domains="dreeve.app"></script>
 </head>
 <body class="font-sans bg-white text-gray-900">
     <header class="md:sticky md:top-0 md:z-50 border-b border-gray-200/70 bg-white/85 backdrop-blur">
         <input type="checkbox" id="menu-toggle" class="peer hidden" aria-hidden="true">
         <nav class="max-w-6xl mx-auto px-4 sm:px-5 py-3 sm:py-4 flex items-center justify-between gap-3">
-            <a href="#" class="flex items-center gap-2 min-w-0">
-                <img src="https://raw.githubusercontent.com/dreeveapp/dreeve/master/public/assets/images/logo.svg"
-                     alt="Logo" class="size-7 sm:size-8 shrink-0"/>
-                <span class="font-extrabold text-gray-900 text-sm sm:text-base truncate">Dreeve</span>
-            </a>
-            <div class="hidden md:flex items-center gap-7 text-sm text-gray-600">
-                <a href="#features" class="nav-link">Features</a>
-                <a href="#install" class="nav-link">Install</a>
-                <a href="https://docs.dreeve.app" class="nav-link">Docs</a>
-                <a href="https://github.com/dreeveapp/dreeve" class="nav-link">GitHub</a>
+            <div class="flex items-center gap-10 min-w-0">
+                <a href="#" class="flex items-center gap-2 min-w-0">
+                    <img src="https://raw.githubusercontent.com/dreeveapp/dreeve/master/public/assets/images/logo.svg"
+                         alt="Logo" class="size-7 sm:size-8 shrink-0"/>
+                    <span class="font-extrabold text-gray-900 text-sm sm:text-base truncate">Dreeve</span>
+                </a>
+                <div class="hidden md:flex items-center gap-7 text-sm text-gray-600">
+                    <a href="#features" class="nav-link">Features</a>
+                    <a href="#install" class="nav-link">Install</a>
+                    <a href="https://docs.dreeve.app" class="nav-link">Docs</a>
+                    <a href="https://demo.dreeve.app" target="_blank" rel="noopener" class="nav-link">Demo</a>
+                </div>
             </div>
             <div class="flex items-center gap-2">
                 <a href="https://www.buymeacoffee.com/ingelbrecht" target="_blank" rel="noopener"
@@ -53,6 +55,10 @@
                    class="hidden sm:inline-flex btn-nav btn-nav-dark">
                     <svg class="size-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.55-3.88-1.55-.52-1.34-1.28-1.7-1.28-1.7-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.3 1.18-3.11-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.18 1.19a11 11 0 0 1 5.8 0c2.2-1.5 3.18-1.19 3.18-1.19.62 1.58.23 2.75.11 3.04.74.81 1.18 1.85 1.18 3.11 0 4.44-2.69 5.4-5.26 5.69.41.35.78 1.05.78 2.12v3.14c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>
                     GitHub
+                    <span class="btn-nav-stars">
+                        <svg class="size-3.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.54L12 17.5l-5.87 3.08 1.12-6.54L2.5 9.41l6.56-.95L12 2.5z"/></svg>
+                        <span data-github-stars>2.1k</span>
+                    </span>
                 </a>
                 <label for="menu-toggle" aria-label="Toggle menu" class="md:hidden relative inline-flex items-center justify-center size-9 rounded-md border border-gray-300 text-gray-700 hover:bg-gray-50 cursor-pointer select-none">
                     <svg class="menu-toggle-icon menu-toggle-icon--open" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
@@ -65,7 +71,7 @@
                 <a href="#features" class="mobile-nav-link">Features</a>
                 <a href="#install" class="mobile-nav-link">Install</a>
                 <a href="https://docs.dreeve.app" class="mobile-nav-link">Docs</a>
-                <a href="https://github.com/dreeveapp/dreeve" class="mobile-nav-link">GitHub</a>
+                <a href="https://demo.dreeve.app" target="_blank" rel="noopener" class="mobile-nav-link">Demo</a>
 
                 <a href="https://www.buymeacoffee.com/ingelbrecht" target="_blank" rel="noopener"
                    class="mt-2 inline-flex btn-nav btn-coffee">
@@ -76,6 +82,10 @@
                    class="mt-2 inline-flex btn-nav btn-nav-dark">
                     <svg class="size-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.55-3.88-1.55-.52-1.34-1.28-1.7-1.28-1.7-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.3 1.18-3.11-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.18 1.19a11 11 0 0 1 5.8 0c2.2-1.5 3.18-1.19 3.18-1.19.62 1.58.23 2.75.11 3.04.74.81 1.18 1.85 1.18 3.11 0 4.44-2.69 5.4-5.26 5.69.41.35.78 1.05.78 2.12v3.14c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>
                     GitHub
+                    <span class="btn-nav-stars">
+                        <svg class="size-3.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.54L12 17.5l-5.87 3.08 1.12-6.54L2.5 9.41l6.56-.95L12 2.5z"/></svg>
+                        <span data-github-stars>2.1k</span>
+                    </span>
                 </a>
             </div>
         </div>
@@ -432,6 +442,56 @@ $ <span class="text-orange-400">docker</span> compose up
         }
 
         new FeatureDialog('#feature-preview');
+
+        class GitHubStars {
+            constructor(repo, { target = '[data-github-stars]', ttl = 60 * 60 * 1000 } = {}) {
+                this.repo = repo;
+                this.targets = document.querySelectorAll(target);
+                this.ttl = ttl;
+                this.cacheKey = `github-stars:${repo}`;
+                if (this.targets.length) this.load();
+            }
+
+            async load() {
+                const cached = this.readCache();
+                if (cached !== null) return this.render(cached);
+
+                try {
+                    const response = await fetch(`https://api.github.com/repos/${this.repo}`);
+                    if (!response.ok) return;
+                    const { stargazers_count: stars } = await response.json();
+                    if (typeof stars !== 'number') return;
+                    this.writeCache(stars);
+                    this.render(stars);
+                } catch {
+                    // Keep the static fallback when GitHub is unreachable or rate limited.
+                }
+            }
+
+            render(stars) {
+                const formatted = new Intl.NumberFormat('en', { notation: 'compact', maximumFractionDigits: 1 })
+                    .format(stars)
+                    .toLowerCase();
+                this.targets.forEach((el) => { el.textContent = formatted; });
+            }
+
+            readCache() {
+                try {
+                    const { stars, at } = JSON.parse(localStorage.getItem(this.cacheKey)) ?? {};
+                    return typeof stars === 'number' && Date.now() - at < this.ttl ? stars : null;
+                } catch {
+                    return null;
+                }
+            }
+
+            writeCache(stars) {
+                try {
+                    localStorage.setItem(this.cacheKey, JSON.stringify({ stars, at: Date.now() }));
+                } catch {}
+            }
+        }
+
+        new GitHubStars('dreeveapp/dreeve');
     </script>
 </body>
 </html>
