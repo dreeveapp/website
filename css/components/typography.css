@@ -12,4 +12,9 @@
         @apply mt-0.5 shrink-0 inline-flex items-center justify-center size-5 rounded-full
                bg-strava-orange-soft text-strava-orange;
     }
+
+    .inline-link {
+        @apply font-semibold text-gray-700 underline decoration-gray-300 underline-offset-2
+               hover:text-strava-orange hover:decoration-strava-orange transition-colors;
+    }
 }
