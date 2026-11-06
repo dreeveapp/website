@@ -7,6 +7,7 @@
 @import "./components/typography.css";
 
 @source "../index.html";
+@source "../strava-alternative.html";
 
 @theme {
     --color-strava-orange: #F26822;

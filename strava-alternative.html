@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Primary SEO -->
+  <title>Self-hosted Strava Alternative – Free &amp; Open Source | Dreeve</title>
+  <meta name="description" content="Looking for a Strava alternative? Dreeve is a free, open-source, self-hosted dashboard for your rides, runs and workouts. Import your Strava archive, Garmin or FIT files and keep your data on your own server.">
+  <link rel="canonical" href="https://dreeve.app/strava-alternative/">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#F26822">
+
+  <!-- Open Graph / social -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Dreeve">
+  <meta property="og:url" content="https://dreeve.app/strava-alternative/">
+  <meta property="og:title" content="Coming from Strava? Take your whole training history with you.">
+  <meta property="og:description" content="Dreeve is a free, open-source, self-hosted dashboard for your sports data. Import your Strava archive in minutes. No accounts, no ads, no paywall on your own stats.">
+  <meta property="og:image" content="https://dreeve.app/og-image.png"><!-- TODO: point to your existing 1200x630 OG image, or a dedicated one -->
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Coming from Strava? Take your whole training history with you.">
+  <meta name="twitter:description" content="Free, open-source, self-hosted dashboard for your rides, runs and workouts.">
+  <meta name="twitter:image" content="https://dreeve.app/og-image.png">
+
+  <!-- Structured data: software -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Dreeve",
+    "alternateName": "Statistics for Strava",
+    "applicationCategory": "HealthApplication",
+    "applicationSubCategory": "Sports and fitness dashboard",
+    "operatingSystem": "Docker, Linux, Kubernetes",
+    "description": "A free, open-source, self-hosted dashboard for your sports and fitness data. Import activities from FIT, TCX and GPX files, Garmin, Polar, Wahoo, Hammerhead, Zepp or Strava.",
+    "url": "https://dreeve.app/",
+    "downloadUrl": "https://github.com/dreeveapp/dreeve",
+    "license": "https://www.gnu.org/licenses/agpl-3.0.html",
+    "isAccessibleForFree": true,
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+    "sameAs": ["https://github.com/dreeveapp/dreeve", "https://docs.dreeve.app/"]
+  }
+  </script>
+
+  <!-- Structured data: breadcrumbs -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Dreeve", "item": "https://dreeve.app/" },
+      { "@type": "ListItem", "position": 2, "name": "Strava alternative", "item": "https://dreeve.app/strava-alternative/" }
+    ]
+  }
+  </script>
+
+  <!-- Structured data: FAQ (keep in sync with the visible FAQ below) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Dreeve a free Strava alternative?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Dreeve is free and open source under the AGPL-3.0 licence. There is no premium tier and no paywall on any statistic. You run it yourself with Docker." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need a Strava account to use Dreeve?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. Dreeve works with plain FIT, TCX and GPX files and with connectors for Garmin Connect, Polar Flow, Wahoo, Hammerhead and Zepp. Strava sync is optional." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I move my Strava history to Dreeve?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Request your account archive from Strava, unzip it, decompress the .gz activity files inside, and drop the FIT, TCX and GPX files into Dreeve's watch folder. Dreeve imports them automatically and skips duplicates, so you can re-run the import safely." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I keep using Strava alongside Dreeve?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Many people keep Strava for its social features and use Dreeve as a private, long-term archive and analysis tool. Dreeve can sync from Strava directly if you have a Strava subscription." }
+      },
+      {
+        "@type": "Question",
+        "name": "Where is my data stored?",
+        "acceptedAnswer": { "@type": "Answer", "text": "On your own server, in a local database. Dreeve has no user accounts on our side, no tracking and no ads." }
+      },
+      {
+        "@type": "Question",
+        "name": "What do I need to run Dreeve?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Anything that can run a Docker container: a home server, a NAS, a Raspberry Pi-class machine or a small VPS. Kubernetes is supported too." }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --accent: #F26822;
+      --accent-dark: #d4561a;
+      --text: #1d1d1f;
+      --muted: #5b5b66;
+      --bg: #ffffff;
+      --bg-soft: #f6f6f8;
+      --border: #e5e5ea;
+      --radius: 14px;
+      --max: 1080px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+      font-size: 17px;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent); }
+    a:hover { color: var(--accent-dark); }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+    section { padding: 72px 0; }
+    section.soft { background: var(--bg-soft); }
+    h1, h2, h3 { line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 16px; }
+    h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 800; }
+    h2 { font-size: clamp(1.6rem, 3.2vw, 2.2rem); font-weight: 750; }
+    h3 { font-size: 1.15rem; font-weight: 700; }
+    p { margin: 0 0 16px; }
+    .lead { font-size: 1.2rem; color: var(--muted); max-width: 680px; }
+    .eyebrow {
+      display: inline-block; font-size: .8rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: .08em; color: var(--accent); margin-bottom: 12px;
+    }
+
+    /* Breadcrumb */
+    .crumbs { font-size: .9rem; color: var(--muted); padding-top: 24px; }
+    .crumbs a { color: var(--muted); text-decoration: none; }
+    .crumbs a:hover { color: var(--accent); }
+
+    /* Hero */
+    .hero { padding-top: 40px; }
+    .badges { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0 28px; padding: 0; list-style: none; }
+    .badges li {
+      font-size: .85rem; font-weight: 600; padding: 6px 12px; border-radius: 999px;
+      background: color-mix(in srgb, var(--accent) 12%, transparent); color: var(--accent);
+    }
+    .ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn {
+      display: inline-block; padding: 13px 22px; border-radius: 10px; font-weight: 650;
+      text-decoration: none; transition: transform .15s ease, background .15s ease;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary { background: var(--accent); color: #fff; }
+    .btn-primary:hover { background: var(--accent-dark); color: #fff; }
+    .btn-ghost { border: 1px solid var(--border); color: var(--text); }
+    .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+    .hero-img {
+      margin-top: 48px; width: 100%; height: auto; border-radius: var(--radius);
+      border: 1px solid var(--border); box-shadow: 0 20px 60px rgba(0,0,0,.12);
+    }
+
+    /* Grids */
+    .grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin-top: 32px; }
+    .card {
+      background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px;
+    }
+    section.soft .card { background: var(--bg); }
+    .card p { color: var(--muted); margin: 0; }
+
+    /* Steps */
+    .steps { counter-reset: step; list-style: none; padding: 0; margin: 32px 0 0; display: grid; gap: 16px; }
+    .steps li {
+      counter-increment: step; position: relative; padding: 22px 24px 22px 76px;
+      background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius);
+    }
+    .steps li::before {
+      content: counter(step); position: absolute; left: 22px; top: 20px;
+      width: 36px; height: 36px; border-radius: 50%; background: var(--accent); color: #fff;
+      font-weight: 800; display: grid; place-items: center;
+    }
+    .steps h3 { margin-bottom: 6px; }
+    .steps p { color: var(--muted); margin: 0; }
+    pre {
+      background: #16161a; color: #e9e9ef; padding: 18px 20px; border-radius: 10px;
+      overflow-x: auto; font-size: .9rem; line-height: 1.5; margin: 14px 0 0;
+    }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    p code, li code { background: var(--bg-soft); padding: 2px 6px; border-radius: 5px; font-size: .9em; }
+
+    /* Table */
+    .table-wrap { overflow-x: auto; margin-top: 32px; border: 1px solid var(--border); border-radius: var(--radius); }
+    table { width: 100%; border-collapse: collapse; min-width: 560px; background: var(--bg); }
+    th, td { text-align: left; padding: 14px 18px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    thead th { font-size: .85rem; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); background: var(--bg-soft); }
+    tbody tr:last-child td { border-bottom: 0; }
+    td:first-child { font-weight: 650; width: 30%; }
+    .note { font-size: .9rem; color: var(--muted); margin-top: 14px; }
+
+    /* FAQ */
+    .faq { margin-top: 28px; }
+    details {
+      border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 22px;
+      margin-bottom: 12px; background: var(--bg);
+    }
+    summary { cursor: pointer; font-weight: 650; font-size: 1.05rem; list-style: none; }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: "+"; float: right; color: var(--accent); font-weight: 800; }
+    details[open] summary::after { content: "–"; }
+    details p { color: var(--muted); margin: 12px 0 0; }
+
+    /* Final CTA */
+    .final { text-align: center; }
+    .final .lead { margin: 0 auto 28px; }
+    .final .ctas { justify-content: center; }
+
+    .disclaimer { font-size: .8rem; color: var(--muted); text-align: center; padding: 28px 24px 40px; }
+  </style>
+</head>
+<body>
+
+<!-- TODO: include your site's normal header/navigation here -->
+
+<main>
+
+  <nav class="wrap crumbs" aria-label="Breadcrumb">
+    <a href="/">Dreeve</a> &rsaquo; <span aria-current="page">Strava alternative</span>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow">Coming from Strava?</span>
+      <h1>The self-hosted Strava alternative that keeps your data yours</h1>
+      <p class="lead">
+        Dreeve is a free, open-source dashboard for your rides, runs and workouts.
+        Bring your entire Strava history with you, keep it on your own server,
+        and get every stat without a subscription.
+      </p>
+      <ul class="badges" aria-label="Highlights">
+        <li>Free forever</li>
+        <li>Open source (AGPL-3.0)</li>
+        <li>Self-hosted</li>
+        <li>No accounts, ads or tracking</li>
+      </ul>
+      <div class="ctas">
+        <a class="btn btn-primary" href="#migrate">Move your Strava data</a>
+        <a class="btn btn-ghost" href="https://demo.dreeve.app/">Try the live demo</a>
+      </div>
+      <img class="hero-img" src="https://dreeve.app/assets/dashboard.webp" width="1600" height="1000" loading="eager" fetchpriority="high"
+           alt="Dreeve dashboard showing yearly distance, weekly training load, best efforts and an activity heatmap">
+      <!-- TODO: set width/height to the image's real pixel size (keeps the aspect ratio, avoids layout shift) -->
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section class="soft">
+    <div class="wrap">
+      <h2>Why athletes look for a Strava alternative</h2>
+      <p class="lead">
+        Strava is great for kudos and segments with friends. But your training history is
+        years of effort, and many athletes want it somewhere they control.
+      </p>
+      <div class="grid">
+        <div class="card">
+          <h3>Your data, your server</h3>
+          <p>Every activity lives in a database on your own hardware or VPS. No third party decides what you can see, export or keep.</p>
+        </div>
+        <div class="card">
+          <h3>No paywall on your own stats</h3>
+          <p>Heatmaps, best efforts, gear tracking, yearly reviews: all included. There is no premium tier, now or later.</p>
+        </div>
+        <div class="card">
+          <h3>Not locked to one platform</h3>
+          <p>Import from FIT, TCX and GPX files or sync from Garmin, Polar, Wahoo, Hammerhead and Zepp. Strava becomes optional.</p>
+        </div>
+        <div class="card">
+          <h3>Private by design</h3>
+          <p>No user accounts on our side, no ads, no tracking. Your rides and runs are only visible to you, unless you choose otherwise.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MIGRATION -->
+  <section id="migrate">
+    <div class="wrap">
+      <span class="eyebrow">Step by step</span>
+      <h2>How to move your Strava history to Dreeve</h2>
+      <p class="lead">
+        Strava lets every user download a full archive of their account, including the original
+        activity files. Dreeve imports those files directly. You don't need a Strava subscription for this.
+      </p>
+
+      <ol class="steps">
+        <li>
+          <h3>Request your Strava archive</h3>
+          <p>
+            On strava.com, go to <strong>Settings → My Account → Download or Delete Your Account</strong>
+            and choose <strong>Request your archive</strong>. Strava emails you a download link,
+            usually within a few hours.
+          </p>
+        </li>
+        <li>
+          <h3>Install Dreeve</h3>
+          <p>If you can run a Docker container, you can run Dreeve: a home server, a NAS or a small VPS all work.</p>
+<pre><code>mkdir dreeve &amp;&amp; cd dreeve
+# add docker-compose.yml and .env from the installation guide
+docker compose up -d
+# then open http://localhost:8080</code></pre>
+          <p style="margin-top:12px">Full instructions are in the <a href="https://docs.dreeve.app/getting-started/installation/">installation guide</a>.</p>
+        </li>
+        <li>
+          <h3>Unpack your activity files and drop them into the watch folder</h3>
+          <p>
+            Dreeve reads plain <code>.fit</code>, <code>.tcx</code> and <code>.gpx</code> files, not compressed
+            archives. Unzip the Strava archive, then decompress the activity files inside it:
+            Strava stores many of them as <code>.fit.gz</code>, <code>.gpx.gz</code> or <code>.tcx.gz</code>.
+            Finally, copy them into Dreeve's <code>watch/</code> folder.
+          </p>
+<pre><code>unzip export_*.zip -d strava-export
+gunzip strava-export/activities/*.gz
+cp strava-export/activities/*.{fit,tcx,gpx} /path/to/dreeve/watch/</code></pre>
+          <p style="margin-top:12px">
+            On Windows or macOS you can use 7-Zip or The Unarchiver instead. FIT files give you the
+            richest data: power, heart rate, laps and full streams.
+          </p>
+        </li>
+        <li>
+          <h3>Let Dreeve import everything</h3>
+          <p>
+            Dreeve checks the folder every five minutes, or you can start an import right away with
+            <code>docker compose exec app bin/console app:import:files</code>. Duplicates are skipped
+            automatically, so it's safe to re-run. You can follow progress on the import log at
+            <code>/admin/file-imports</code>.
+          </p>
+        </li>
+        <li>
+          <h3>Keep new activities flowing in</h3>
+          <p>
+            Connect <a href="https://docs.dreeve.app/connectors/garmin-connect/">Garmin Connect</a>,
+            <a href="https://docs.dreeve.app/connectors/polar-flow-connector/">Polar Flow</a>,
+            <a href="https://docs.dreeve.app/connectors/wahoo-connector/">Wahoo</a> or another
+            <a href="https://docs.dreeve.app/importing/overview/">connector</a> so new workouts arrive
+            straight from your device. No Strava in between.
+          </p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="soft">
+    <div class="wrap">
+      <h2>What you get on day one</h2>
+      <p class="lead">Your whole history, analysed the moment it's imported. Cycling, running, swimming, hiking, skiing and more.</p>
+      <div class="grid">
+        <div class="card"><h3>Configurable dashboard</h3><p>Every stat, chart and trend at a glance, arranged the way you like.</p></div>
+        <div class="card"><h3>Personal heatmap</h3><p>A world map of every kilometre you've ever covered.</p></div>
+        <div class="card"><h3>Best efforts</h3><p>Your fastest 5k, 10k, 50k, 100k and beyond, across every sport.</p></div>
+        <div class="card"><h3>Gear &amp; maintenance</h3><p>Track wear on bikes, shoes and components, with service reminders.</p></div>
+        <div class="card"><h3>Milestones &amp; Rewind</h3><p>A timeline of your achievements and a yearly review of your season.</p></div>
+        <div class="card"><h3>Monthly calendar</h3><p>Monthly totals, sport breakdowns and trends in an interactive calendar.</p></div>
+        <div class="card"><h3>Eddington number</h3><p>See your Eddington number for every sport you track.</p></div>
+        <div class="card"><h3>AI workout assistant</h3><p>Ask questions about your own training, with any AI provider or a local model.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARISON -->
+  <section>
+    <div class="wrap">
+      <h2>Dreeve vs. Strava at a glance</h2>
+      <p class="lead">They do different jobs. Strava is a social network for athletes. Dreeve is your private, long-term training archive.</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th></th><th>Dreeve</th><th>Strava</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Where your data lives</td><td>Your own server</td><td>Strava's cloud</td></tr>
+            <tr><td>Price</td><td>Free, no premium tier</td><td>Free plan plus a paid subscription</td></tr>
+            <tr><td>Source code</td><td>Open source (AGPL-3.0)</td><td>Proprietary</td></tr>
+            <tr><td>Ads &amp; tracking</td><td>None</td><td>See Strava's privacy policy</td></tr>
+            <tr><td>Data sources</td><td>FIT/TCX/GPX files, Garmin, Polar, Wahoo, Hammerhead, Zepp, optional Strava sync</td><td>Most devices and apps</td></tr>
+            <tr><td>Social feed &amp; kudos</td><td>No: it's your personal dashboard</td><td>Yes</td></tr>
+            <tr><td>Segment leaderboards</td><td>Your own segment history (via Strava sync)</td><td>Global leaderboards</td></tr>
+            <tr><td>Setup</td><td>Docker, a few minutes</td><td>Sign up in the app</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">
+        Want both? Plenty of people keep Strava for the social side and use Dreeve as their archive.
+        With a Strava subscription, Dreeve can also
+        <a href="https://docs.dreeve.app/importing/strava-import/">sync directly from Strava</a>,
+        including segments, challenges and trophies.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="soft">
+    <div class="wrap">
+      <h2>Frequently asked questions</h2>
+      <div class="faq">
+        <details>
+          <summary>Is Dreeve a free Strava alternative?</summary>
+          <p>Yes. Dreeve is free and open source under the AGPL-3.0 licence. There is no premium tier and no paywall on any statistic. You run it yourself with Docker.</p>
+        </details>
+        <details>
+          <summary>Do I need a Strava account to use Dreeve?</summary>
+          <p>No. Dreeve works with plain FIT, TCX and GPX files and with connectors for Garmin Connect, Polar Flow, Wahoo, Hammerhead and Zepp. Strava sync is optional.</p>
+        </details>
+        <details>
+          <summary>How do I move my Strava history to Dreeve?</summary>
+          <p>Request your account archive from Strava, unzip it, decompress the <code>.gz</code> activity files inside, and drop the FIT, TCX and GPX files into Dreeve's watch folder. Dreeve imports them automatically and skips duplicates, so you can re-run the import safely. See the <a href="#migrate">step-by-step guide</a> above.</p>
+        </details>
+        <details>
+          <summary>Can I keep using Strava alongside Dreeve?</summary>
+          <p>Yes. Many people keep Strava for its social features and use Dreeve as a private, long-term archive and analysis tool. Dreeve can sync from Strava directly if you have a Strava subscription.</p>
+        </details>
+        <details>
+          <summary>Where is my data stored?</summary>
+          <p>On your own server, in a local database. Dreeve has no user accounts on our side, no tracking and no ads.</p>
+        </details>
+        <details>
+          <summary>What do I need to run Dreeve?</summary>
+          <p>Anything that can run a Docker container: a home server, a NAS, a Raspberry Pi-class machine or a small VPS. <a href="https://docs.dreeve.app/getting-started/installation-on-k8s/">Kubernetes</a> is supported too.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final">
+    <div class="wrap">
+      <h2>Your training history deserves a home you own</h2>
+      <p class="lead">Set up Dreeve in a few minutes, import your Strava archive, and keep every ride and run for good.</p>
+      <div class="ctas">
+        <a class="btn btn-primary" href="https://docs.dreeve.app/getting-started/installation/">Get started</a>
+        <a class="btn btn-ghost" href="https://demo.dreeve.app/">Try the live demo</a>
+        <a class="btn btn-ghost" href="https://github.com/dreeveapp/dreeve">View on GitHub</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<p class="disclaimer">
+  Strava is a trademark of Strava, Inc. Dreeve is an independent open-source project and is not affiliated with, endorsed by or sponsored by Strava.
+</p>
+
+<!-- TODO: include your site's normal footer here -->
+
+</body>
+</html>
