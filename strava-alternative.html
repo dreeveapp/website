@@ -377,105 +377,180 @@ $ <span class="text-orange-400">cp</span> strava-export/activities/*.{fit,tcx,gp
         </ol>
     </section>
 
-  <!-- FEATURES -->
-  <section class="soft">
-    <div class="wrap">
-      <h2>What you get on day one</h2>
-      <p class="lead">Your whole history, analysed the moment it's imported. Cycling, running, swimming, hiking, skiing and more.</p>
-      <div class="grid">
-        <div class="card"><h3>Configurable dashboard</h3><p>Every stat, chart and trend at a glance, arranged the way you like.</p></div>
-        <div class="card"><h3>Personal heatmap</h3><p>A world map of every kilometre you've ever covered.</p></div>
-        <div class="card"><h3>Best efforts</h3><p>Your fastest 5k, 10k, 50k, 100k and beyond, across every sport.</p></div>
-        <div class="card"><h3>Gear &amp; maintenance</h3><p>Track wear on bikes, shoes and components, with service reminders.</p></div>
-        <div class="card"><h3>Milestones &amp; Rewind</h3><p>A timeline of your achievements and a yearly review of your season.</p></div>
-        <div class="card"><h3>Monthly calendar</h3><p>Monthly totals, sport breakdowns and trends in an interactive calendar.</p></div>
-        <div class="card"><h3>Eddington number</h3><p>See your Eddington number for every sport you track.</p></div>
-        <div class="card"><h3>AI workout assistant</h3><p>Ask questions about your own training, with any AI provider or a local model.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- COMPARISON -->
-  <section>
-    <div class="wrap">
-      <h2>Dreeve vs. Strava at a glance</h2>
-      <p class="lead">They do different jobs. Strava is a social network for athletes. Dreeve is your private, long-term training archive.</p>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr><th></th><th>Dreeve</th><th>Strava</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Where your data lives</td><td>Your own server</td><td>Strava's cloud</td></tr>
-            <tr><td>Price</td><td>Free, no premium tier</td><td>Free plan plus a paid subscription</td></tr>
-            <tr><td>Source code</td><td>Open source (AGPL-3.0)</td><td>Proprietary</td></tr>
-            <tr><td>Ads &amp; tracking</td><td>None</td><td>See Strava's privacy policy</td></tr>
-            <tr><td>Data sources</td><td>FIT/TCX/GPX files, Garmin, Polar, Wahoo, Hammerhead, Zepp, optional Strava sync</td><td>Most devices and apps</td></tr>
-            <tr><td>Social feed &amp; kudos</td><td>No: it's your personal dashboard</td><td>Yes</td></tr>
-            <tr><td>Segment leaderboards</td><td>Your own segment history (via Strava sync)</td><td>Global leaderboards</td></tr>
-            <tr><td>Setup</td><td>Docker, a few minutes</td><td>Sign up in the app</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="note">
-        Want both? Plenty of people keep Strava for the social side and use Dreeve as their archive.
-        With a Strava subscription, Dreeve can also
-        <a href="https://docs.dreeve.app/importing/strava-import/">sync directly from Strava</a>,
-        including segments, challenges and trophies.
-      </p>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="soft">
-    <div class="wrap">
-      <h2>Frequently asked questions</h2>
-      <div class="faq">
-        <details>
-          <summary>Is Dreeve a free Strava alternative?</summary>
-          <p>Yes. Dreeve is free and open source under the AGPL-3.0 licence. There is no premium tier and no paywall on any statistic. You run it yourself with Docker.</p>
-        </details>
-        <details>
-          <summary>Do I need a Strava account to use Dreeve?</summary>
-          <p>No. Dreeve works with plain FIT, TCX and GPX files and with connectors for Garmin Connect, Polar Flow, Wahoo, Hammerhead and Zepp. Strava sync is optional.</p>
-        </details>
-        <details>
-          <summary>How do I move my Strava history to Dreeve?</summary>
-          <p>Request your account archive from Strava, unzip it, decompress the <code>.gz</code> activity files inside, and drop the FIT, TCX and GPX files into Dreeve's watch folder. Dreeve imports them automatically and skips duplicates, so you can re-run the import safely. See the <a href="#migrate">step-by-step guide</a> above.</p>
-        </details>
-        <details>
-          <summary>Can I keep using Strava alongside Dreeve?</summary>
-          <p>Yes. Many people keep Strava for its social features and use Dreeve as a private, long-term archive and analysis tool. Dreeve can sync from Strava directly if you have a Strava subscription.</p>
-        </details>
-        <details>
-          <summary>Where is my data stored?</summary>
-          <p>On your own server, in a local database. Dreeve has no user accounts on our side, no tracking and no ads.</p>
-        </details>
-        <details>
-          <summary>What do I need to run Dreeve?</summary>
-          <p>Anything that can run a Docker container: a home server, a NAS, a Raspberry Pi-class machine or a small VPS. <a href="https://docs.dreeve.app/getting-started/installation-on-k8s/">Kubernetes</a> is supported too.</p>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- FINAL CTA -->
-  <section class="final">
-    <div class="wrap">
-      <h2>Your training history deserves a home you own</h2>
-      <p class="lead">Set up Dreeve in a few minutes, import your Strava archive, and keep every ride and run for good.</p>
-      <div class="ctas">
-        <a class="btn btn-primary" href="https://docs.dreeve.app/getting-started/installation/">Get started</a>
-        <a class="btn btn-ghost" href="https://demo.dreeve.app/">Try the live demo</a>
-        <a class="btn btn-ghost" href="https://github.com/dreeveapp/dreeve">View on GitHub</a>
-      </div>
-    </div>
-  </section>
-
+    <section class="bg-gray-50 border-y border-gray-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-5 py-14 md:py-20">
+            <div class="max-w-2xl">
+                <h2 class="section-title">What you get on day one</h2>
+                <p class="mt-3 text-gray-600">Your whole history, analysed the moment it's imported. Cycling, running, swimming, hiking, skiing and more.</p>
+            </div>
+            <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="feature-card group">
+                    <div class="feature-card__icon">
+                        <svg aria-hidden="true" class="size-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.143 4H4.857A.857.857 0 0 0 4 4.857v4.286c0 .473.384.857.857.857h4.286A.857.857 0 0 0 10 9.143V4.857A.857.857 0 0 0 9.143 4Zm10 0h-4.286a.857.857 0 0 0-.857.857v4.286c0 .473.384.857.857.857h4.286A.857.857 0 0 0 20 9.143V4.857A.857.857 0 0 0 19.143 4Zm-10 10H4.857a.857.857 0 0 0-.857.857v4.286c0 .473.384.857.857.857h4.286a.857.857 0 0 0 .857-.857v-4.286A.857.857 0 0 0 9.143 14Zm10 0h-4.286a.857.857 0 0 0-.857.857v4.286c0 .473.384.857.857.857h4.286a.857.857 0 0 0 .857-.857v-4.286a.857.857 0 0 0-.857-.857Z"/></svg>
+                    </div>
+                    <h3 class="font-bold text-gray-900">Configurable dashboard</h3>
+                    <p class="mt-1 text-sm text-gray-600">Every stat, chart and trend at a glance, arranged the way you like.</p>
+                </div>
+                <div class="feature-card group">
+                    <div class="feature-card__icon">
+                        <svg aria-hidden="true" class="size-5" viewBox="0 0 24 24" fill="none"><path d="M3 8.70938C3 7.23584 3 6.49907 3.39264 6.06935C3.53204 5.91678 3.70147 5.79466 3.89029 5.71066C4.42213 5.47406 5.12109 5.70705 6.51901 6.17302C7.58626 6.52877 8.11989 6.70665 8.6591 6.68823C8.85714 6.68147 9.05401 6.65511 9.24685 6.60952C9.77191 6.48541 10.2399 6.1734 11.176 5.54937L12.5583 4.62778C13.7574 3.82843 14.3569 3.42876 15.0451 3.3366C15.7333 3.24444 16.4168 3.47229 17.7839 3.92799L18.9487 4.31624C19.9387 4.64625 20.4337 4.81126 20.7169 5.20409C21 5.59692 21 6.11871 21 7.16229V15.2907C21 16.7642 21 17.501 20.6074 17.9307C20.468 18.0833 20.2985 18.2054 20.1097 18.2894C19.5779 18.526 18.8789 18.293 17.481 17.827C16.4137 17.4713 15.8801 17.2934 15.3409 17.3118C15.1429 17.3186 14.946 17.3449 14.7532 17.3905C14.2281 17.5146 13.7601 17.8266 12.824 18.4507L11.4417 19.3722C10.2426 20.1716 9.64311 20.5713 8.95493 20.6634C8.26674 20.7556 7.58319 20.5277 6.21609 20.072L5.05132 19.6838C4.06129 19.3538 3.56627 19.1888 3.28314 18.7959C3 18.4031 3 17.8813 3 16.8377V8.70938Z" stroke="currentColor" stroke-width="2"></path><path d="M9 6.63867V20.5" stroke="currentColor" stroke-width="2"></path><path d="M15 3V17" stroke="currentColor" stroke-width="2"></path></svg>
+                    </div>
+                    <h3 class="font-bold text-gray-900">Personal heatmap</h3>
+                    <p class="mt-1 text-sm text-gray-600">A world map of every kilometre you've ever covered.</p>
+                </div>
+                <div class="feature-card group">
+                    <div class="feature-card__icon">
+                        <svg aria-hidden="true" class="size-5" viewBox="0 0 24 24"><path fill="currentColor" d="M21,4H18V3a1,1,0,0,0-1-1H7A1,1,0,0,0,6,3V4H3A1,1,0,0,0,2,5V8a4,4,0,0,0,4,4H7.54A6,6,0,0,0,11,13.91V16H10a3,3,0,0,0-3,3v2a1,1,0,0,0,1,1h8a1,1,0,0,0,1-1V19a3,3,0,0,0-3-3H13V13.91A6,6,0,0,0,16.46,12H18a4,4,0,0,0,4-4V5A1,1,0,0,0,21,4ZM6,10A2,2,0,0,1,4,8V6H6V8a6,6,0,0,0,.35,2Zm8,8a1,1,0,0,1,1,1v1H9V19a1,1,0,0,1,1-1ZM16,8A4,4,0,0,1,8,8V4h8Zm4,0a2,2,0,0,1-2,2h-.35A6,6,0,0,0,18,8V6h2Z"></path></svg>
+                    </div>
+                    <h3 class="font-bold text-gray-900">Best efforts</h3>
+                    <p class="mt-1 text-sm text-gray-600">Your fastest 5k, 10k, 50k, 100k and beyond, across every sport.</p>
+                </div>
+                <div class="feature-card group">
+                    <div class="feature-card__icon">
+                        <svg class="size-5" aria-hidden="true" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m10.051 8.102-3.778.322-1.994 1.994a.94.94 0 0 0 .533 1.6l2.698.316m8.39 1.617-.322 3.78-1.994 1.994a.94.94 0 0 1-1.595-.533l-.4-2.652m8.166-11.174a1.366 1.366 0 0 0-1.12-1.12c-1.616-.279-4.906-.623-6.38.853-1.671 1.672-5.211 8.015-6.31 10.023a.932.932 0 0 0 .162 1.111l.828.835.833.832a.932.932 0 0 0 1.111.163c2.008-1.102 8.35-4.642 10.021-6.312 1.475-1.478 1.133-4.77.855-6.385Zm-2.961 3.722a1.88 1.88 0 1 1-3.76 0 1.88 1.88 0 0 1 3.76 0Z"></path></svg>
+                    </div>
+                    <h3 class="font-bold text-gray-900">Gear &amp; maintenance</h3>
+                    <p class="mt-1 text-sm text-gray-600">Track wear on bikes, shoes and components, with service reminders.</p>
+                </div>
+                <div class="feature-card group">
+                    <div class="feature-card__icon">
+                        <svg aria-hidden="true" class="size-5" fill="currentColor" viewBox="0 -960 960 960"><path d="M80-200v-80h240v-240h240v-240h320v80H640v240H400v240H80Z"/></svg>
+                    </div>
+                    <h3 class="font-bold text-gray-900">Milestones &amp; Rewind</h3>
+                    <p class="mt-1 text-sm text-gray-600">A timeline of your achievements and a yearly review of your season.</p>
+                </div>
+                <div class="feature-card group">
+                    <div class="feature-card__icon">
+                        <svg aria-hidden="true" class="size-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 10h16m-8-3V4M7 7V4m10 3V4M5 20h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z"/></svg>
+                    </div>
+                    <h3 class="font-bold text-gray-900">Monthly calendar</h3>
+                    <p class="mt-1 text-sm text-gray-600">Monthly totals, sport breakdowns and trends in an interactive calendar.</p>
+                </div>
+                <div class="feature-card group">
+                    <div class="feature-card__icon">
+                        <svg aria-hidden="true" class="size-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 20h16M7 16v-4m5 4V8m5 8V4"/></svg>
+                    </div>
+                    <h3 class="font-bold text-gray-900">Eddington number</h3>
+                    <p class="mt-1 text-sm text-gray-600">See your Eddington number for every sport you track.</p>
+                </div>
+                <div class="feature-card group">
+                    <div class="feature-card__icon">
+                        <svg class="size-5" aria-hidden="true" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17h6l3 3v-3h2V9h-2M4 4h11v8H9l-3 3v-3H4V4Z"></path></svg>
+                    </div>
+                    <h3 class="font-bold text-gray-900">AI workout assistant</h3>
+                    <p class="mt-1 text-sm text-gray-600">Ask questions about your own training, with any AI provider or a local model.</p>
+                </div>
+            </div>
+            <p class="mt-6 text-sm">
+                <a href="/#features" class="font-semibold text-strava-orange hover:underline">See all features →</a>
+            </p>
+        </div>
+    </section>
+    <section class="max-w-6xl mx-auto px-4 sm:px-5 py-14 md:py-20">
+        <div class="max-w-2xl">
+            <h2 class="section-title">Dreeve vs. Strava at a glance</h2>
+            <p class="mt-3 text-gray-600">They do different jobs. Strava is a social network for athletes. Dreeve is your private, long-term training archive.</p>
+        </div>
+        <div class="mt-10 overflow-x-auto rounded-[14px] border border-gray-200 bg-white">
+            <table class="w-full min-w-[560px] text-sm text-left">
+                <thead class="bg-gray-50 text-xxs font-bold uppercase tracking-widest text-gray-500">
+                    <tr>
+                        <th scope="col" class="px-4 py-3 border-b border-gray-200"><span class="sr-only">Feature</span></th>
+                        <th scope="col" class="px-4 py-3 border-b border-gray-200 text-strava-orange">Dreeve</th>
+                        <th scope="col" class="px-4 py-3 border-b border-gray-200">Strava</th>
+                    </tr>
+                </thead>
+                <tbody class="text-gray-600 [&_td]:px-4 [&_td]:py-3 [&_td]:align-top [&_tr:not(:last-child)_td]:border-b [&_td]:border-gray-200 [&_td:first-child]:font-semibold [&_td:first-child]:text-gray-900 [&_td:first-child]:w-[30%]">
+                    <tr><td>Where your data lives</td><td>Your own server</td><td>Strava's cloud</td></tr>
+                    <tr><td>Price</td><td>Free, no premium tier</td><td>Free plan plus a paid subscription</td></tr>
+                    <tr><td>Source code</td><td>Open source (AGPL-3.0)</td><td>Proprietary</td></tr>
+                    <tr><td>Ads &amp; tracking</td><td>None</td><td>See Strava's privacy policy</td></tr>
+                    <tr><td>Data sources</td><td>FIT/TCX/GPX files, Garmin, Polar, Wahoo, Hammerhead, Zepp, optional Strava sync</td><td>Most devices and apps</td></tr>
+                    <tr><td>Social feed &amp; kudos</td><td>No: it's your personal dashboard</td><td>Yes</td></tr>
+                    <tr><td>Segment leaderboards</td><td>Your own segment history (via Strava sync)</td><td>Global leaderboards</td></tr>
+                    <tr><td>Setup</td><td>Docker, a few minutes</td><td>Sign up in the app</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="mt-3 text-sm text-gray-600">
+            Want both? Plenty of people keep Strava for the social side and use Dreeve as their archive.
+            With a Strava subscription, Dreeve can also
+            <a href="https://docs.dreeve.app/importing/strava-import/" target="_blank" rel="noopener" class="inline-link">sync directly from Strava</a>,
+            including segments, challenges and trophies.
+        </p>
+    </section>
+    <section class="bg-gray-50 border-y border-gray-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-5 py-14 md:py-20">
+            <h2 class="section-title">Frequently asked questions</h2>
+            <div class="mt-10 space-y-3">
+                <details class="group bg-white border border-gray-200 rounded-[14px] p-[18px]">
+                    <summary class="flex items-center justify-between gap-3 cursor-pointer list-none [&::-webkit-details-marker]:hidden font-bold text-gray-900">
+                        Is Dreeve a free Strava alternative?
+                        <svg aria-hidden="true" class="size-4 shrink-0 text-strava-orange transition-transform group-open:rotate-45" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 5v14M5 12h14"/></svg>
+                    </summary>
+                    <p class="mt-2 text-sm text-gray-600">Yes. Dreeve is free and open source under the AGPL-3.0 licence. There is no premium tier and no paywall on any statistic. You run it yourself with Docker.</p>
+                </details>
+                <details class="group bg-white border border-gray-200 rounded-[14px] p-[18px]">
+                    <summary class="flex items-center justify-between gap-3 cursor-pointer list-none [&::-webkit-details-marker]:hidden font-bold text-gray-900">
+                        Do I need a Strava account to use Dreeve?
+                        <svg aria-hidden="true" class="size-4 shrink-0 text-strava-orange transition-transform group-open:rotate-45" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 5v14M5 12h14"/></svg>
+                    </summary>
+                    <p class="mt-2 text-sm text-gray-600">No. Dreeve works with plain FIT, TCX and GPX files and with connectors for Garmin Connect, Polar Flow, Wahoo, Hammerhead and Zepp. Strava sync is optional.</p>
+                </details>
+                <details class="group bg-white border border-gray-200 rounded-[14px] p-[18px]">
+                    <summary class="flex items-center justify-between gap-3 cursor-pointer list-none [&::-webkit-details-marker]:hidden font-bold text-gray-900">
+                        How do I move my Strava history to Dreeve?
+                        <svg aria-hidden="true" class="size-4 shrink-0 text-strava-orange transition-transform group-open:rotate-45" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 5v14M5 12h14"/></svg>
+                    </summary>
+                    <p class="mt-2 text-sm text-gray-600">Request your account archive from Strava, unzip it, decompress the <code class="font-mono text-xs bg-gray-100 px-1 py-0.5 rounded">.gz</code> activity files inside, and drop the FIT, TCX and GPX files into Dreeve's watch folder. Dreeve imports them automatically and skips duplicates, so you can re-run the import safely. See the <a href="#migrate" class="inline-link">step-by-step guide</a> above.</p>
+                </details>
+                <details class="group bg-white border border-gray-200 rounded-[14px] p-[18px]">
+                    <summary class="flex items-center justify-between gap-3 cursor-pointer list-none [&::-webkit-details-marker]:hidden font-bold text-gray-900">
+                        Can I keep using Strava alongside Dreeve?
+                        <svg aria-hidden="true" class="size-4 shrink-0 text-strava-orange transition-transform group-open:rotate-45" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 5v14M5 12h14"/></svg>
+                    </summary>
+                    <p class="mt-2 text-sm text-gray-600">Yes. Many people keep Strava for its social features and use Dreeve as a private, long-term archive and analysis tool. Dreeve can sync from Strava directly if you have a Strava subscription.</p>
+                </details>
+                <details class="group bg-white border border-gray-200 rounded-[14px] p-[18px]">
+                    <summary class="flex items-center justify-between gap-3 cursor-pointer list-none [&::-webkit-details-marker]:hidden font-bold text-gray-900">
+                        Where is my data stored?
+                        <svg aria-hidden="true" class="size-4 shrink-0 text-strava-orange transition-transform group-open:rotate-45" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 5v14M5 12h14"/></svg>
+                    </summary>
+                    <p class="mt-2 text-sm text-gray-600">On your own server, in a local database. Dreeve has no user accounts on our side, no tracking and no ads.</p>
+                </details>
+                <details class="group bg-white border border-gray-200 rounded-[14px] p-[18px]">
+                    <summary class="flex items-center justify-between gap-3 cursor-pointer list-none [&::-webkit-details-marker]:hidden font-bold text-gray-900">
+                        What do I need to run Dreeve?
+                        <svg aria-hidden="true" class="size-4 shrink-0 text-strava-orange transition-transform group-open:rotate-45" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 5v14M5 12h14"/></svg>
+                    </summary>
+                    <p class="mt-2 text-sm text-gray-600">Anything that can run a Docker container: a home server, a NAS, a Raspberry Pi-class machine or a small VPS. <a href="https://docs.dreeve.app/getting-started/installation-on-k8s/" target="_blank" rel="noopener" class="inline-link">Kubernetes</a> is supported too.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="max-w-4xl mx-auto px-4 sm:px-5 py-14 md:py-20 text-center">
+            <h2 class="section-title">Your training history deserves a home you own</h2>
+            <p class="mt-3 text-gray-600 max-w-2xl mx-auto">Set up Dreeve in a few minutes, import your Strava archive, and keep every ride and run for good.</p>
+            <div class="mt-7 flex flex-wrap items-center justify-center gap-3">
+                <a href="https://docs.dreeve.app/getting-started/installation/" target="_blank" rel="noopener" class="btn btn-primary group">
+                    Get started
+                    <svg aria-hidden="true" class="size-4 transition-transform duration-200 group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 5l7 7-7 7"/></svg>
+                </a>
+                <a href="https://demo.dreeve.app" target="_blank" rel="noopener" class="btn btn-outline">
+                    Try the live demo
+                    <svg aria-hidden="true" class="size-3.5 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                </a>
+                <a href="https://github.com/dreeveapp/dreeve" target="_blank" rel="noopener" class="btn btn-dark">
+                    <svg aria-hidden="true" class="size-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.55-3.88-1.55-.52-1.34-1.28-1.7-1.28-1.7-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.3 1.18-3.11-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.18 1.19a11 11 0 0 1 5.8 0c2.2-1.5 3.18-1.19 3.18-1.19.62 1.58.23 2.75.11 3.04.74.81 1.18 1.85 1.18 3.11 0 4.44-2.69 5.4-5.26 5.69.41.35.78 1.05.78 2.12v3.14c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>
+                    View on GitHub
+                </a>
+            </div>
+        </div>
+    </section>
 </main>
-
-<p class="disclaimer">
-  Strava is a trademark of Strava, Inc. Dreeve is an independent open-source project and is not affiliated with, endorsed by or sponsored by Strava.
+<p class="max-w-6xl mx-auto px-5 py-6 text-center text-xxs text-gray-400">
+    Strava is a trademark of Strava, Inc. Dreeve is an independent open-source project and is not affiliated with, endorsed by or sponsored by Strava.
 </p>
 
     <footer class="bg-gray-100 text-gray-600">
