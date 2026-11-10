@@ -8,6 +8,7 @@
 
 @source "../index.html";
 @source "../strava-alternative.html";
+@source "../stickers.html";
 
 @theme {
     --color-strava-orange: #F26822;
