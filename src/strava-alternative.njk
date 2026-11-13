@@ -1,30 +1,17 @@
-<!doctype html>
-<html lang="en" class="scroll-smooth md:scroll-pt-20">
-<head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Self-hosted Strava Alternative – Free &amp; Open Source | Dreeve</title>
-    <meta name="description" content="Looking for a Strava alternative? Dreeve is a free, open-source, self-hosted dashboard for your rides, runs and workouts. Import your Strava archive, Garmin or FIT files and keep your data on your own server."/>
-    <link rel="canonical" href="https://dreeve.app/strava-alternative"/>
-    <meta name="robots" content="index, follow, max-image-preview:large"/>
+---
+title: "Self-hosted Strava Alternative – Free & Open Source | Dreeve"
+description: "Looking for a Strava alternative? Dreeve is a free, open-source, self-hosted dashboard for your rides, runs and workouts. Import your Strava archive, Garmin or FIT files and keep your data on your own server."
+canonical: "https://dreeve.app/strava-alternative"
+robots: "index, follow, max-image-preview:large"
+ogTitle: "Coming from Strava? Take your whole training history with you."
+ogDescription: "Dreeve is a free, open-source, self-hosted dashboard for your sports data. Import your Strava archive in minutes. No accounts, no ads, no paywall on your own stats."
+twitterTitle: "Coming from Strava? Take your whole training history with you."
+twitterDescription: "Free, open-source, self-hosted dashboard for your rides, runs and workouts."
+twitterImage: "https://dreeve.app/assets/og-image.png"
+---
+{% extends "layouts/base.njk" %}
 
-    <link rel="icon" type="image/svg+xml" href="https://raw.githubusercontent.com/dreeveapp/dreeve/master/public/assets/images/logo.svg"/>
-    <meta name="theme-color" content="#F26822"/>
-
-    <meta property="og:type" content="website"/>
-    <meta property="og:site_name" content="Dreeve"/>
-    <meta property="og:title" content="Coming from Strava? Take your whole training history with you."/>
-    <meta property="og:description" content="Dreeve is a free, open-source, self-hosted dashboard for your sports data. Import your Strava archive in minutes. No accounts, no ads, no paywall on your own stats."/>
-    <meta property="og:url" content="https://dreeve.app/strava-alternative"/>
-    <meta property="og:image" content="https://dreeve.app/assets/og-image.png"/>
-    <meta property="og:image:type" content="image/png"/>
-    <meta property="og:image:width" content="1200"/>
-    <meta property="og:image:height" content="630"/>
-    <meta property="og:image:alt" content="Dreeve logo"/>
-    <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:title" content="Coming from Strava? Take your whole training history with you."/>
-    <meta name="twitter:description" content="Free, open-source, self-hosted dashboard for your rides, runs and workouts."/>
-    <meta name="twitter:image" content="https://dreeve.app/assets/og-image.png"/>
+{% block head %}
 
   <!-- Structured data: software -->
   <script type="application/ld+json">
@@ -45,14 +32,9 @@
     "sameAs": ["https://github.com/dreeveapp/dreeve", "https://docs.dreeve.app/"]
   }
   </script>
+{%- endblock %}
 
-    <link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
-    <link href="dist/app.min.css?v=936ca75e" rel="stylesheet"/>
-    <script defer src="https://analytics.robiningelbrecht.be/script.js" data-website-id="38bb383d-32cf-4d59-aaa2-b6eceaa245e2" data-domains="dreeve.app"></script>
-</head>
-<body class="font-sans bg-white text-gray-900">
+{% block content %}
     <header class="md:sticky md:top-0 md:z-50 border-b border-gray-200/70 bg-white/85 backdrop-blur">
         <input type="checkbox" id="menu-toggle" class="peer hidden" aria-hidden="true">
         <nav class="max-w-6xl mx-auto px-4 sm:px-5 py-3 sm:py-4 flex items-center justify-between gap-3">
@@ -496,5 +478,4 @@ $ <span class="text-orange-400">cp</span> strava-export/activities/*.{fit,tcx,gp
 
         new GitHubStars('dreeveapp/dreeve');
     </script>
-</body>
-</html>
+{%- endblock %}

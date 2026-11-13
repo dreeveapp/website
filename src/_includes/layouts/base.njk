@@ -1,0 +1,48 @@
+<!doctype html>
+<!-- Generated from src/, do not edit. -->
+<html lang="en" class="scroll-smooth md:scroll-pt-20">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ description }}"/>
+    <link rel="canonical" href="{{ canonical }}"/>
+    {%- if robots %}
+    <meta name="robots" content="{{ robots }}"/>
+    {%- endif %}
+
+    <link rel="icon" type="image/svg+xml" href="https://raw.githubusercontent.com/dreeveapp/dreeve/master/public/assets/images/logo.svg"/>
+    <meta name="theme-color" content="#F26822"/>
+
+    <meta property="og:type" content="website"/>
+    <meta property="og:site_name" content="Dreeve"/>
+    <meta property="og:title" content="{{ ogTitle }}"/>
+    <meta property="og:description" content="{{ ogDescription }}"/>
+    <meta property="og:url" content="{{ canonical }}"/>
+    <meta property="og:image" content="https://dreeve.app/assets/og-image.png"/>
+    <meta property="og:image:type" content="image/png"/>
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+    <meta property="og:image:alt" content="Dreeve logo"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    {%- if twitterTitle %}
+    <meta name="twitter:title" content="{{ twitterTitle }}"/>
+    {%- endif %}
+    {%- if twitterDescription %}
+    <meta name="twitter:description" content="{{ twitterDescription }}"/>
+    {%- endif %}
+    {%- if twitterImage %}
+    <meta name="twitter:image" content="{{ twitterImage }}"/>
+    {%- endif %}
+    {%- block head %}{% endblock %}
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+    <link href="dist/app.min.css?v={{ build.cssVersion }}" rel="stylesheet"/>
+    <script defer src="https://analytics.robiningelbrecht.be/script.js" data-website-id="38bb383d-32cf-4d59-aaa2-b6eceaa245e2" data-domains="dreeve.app"></script>
+</head>
+<body class="font-sans bg-white text-gray-900">
+    {%- block content %}{% endblock %}
+</body>
+</html>

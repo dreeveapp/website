@@ -1,36 +1,17 @@
-<!doctype html>
-<html lang="en" class="scroll-smooth md:scroll-pt-20">
-<head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Get Free Dreeve Stickers | Dreeve</title>
-    <meta name="description" content="Love Dreeve? Leave your address and get a few free Dreeve stickers in the mail for your bike, laptop or water bottle."/>
-    <link rel="canonical" href="https://dreeve.app/stickers"/>
-    <meta name="robots" content="index, follow, max-image-preview:large"/>
-    <link rel="icon" type="image/svg+xml" href="https://raw.githubusercontent.com/dreeveapp/dreeve/master/public/assets/images/logo.svg"/>
-    <meta name="theme-color" content="#F26822"/>
-    <meta property="og:type" content="website"/>
-    <meta property="og:site_name" content="Dreeve"/>
-    <meta property="og:title" content="Get free Dreeve stickers"/>
-    <meta property="og:description" content="Leave your address and get a few free Dreeve stickers in the mail."/>
-    <meta property="og:url" content="https://dreeve.app/stickers"/>
-    <meta property="og:image" content="https://dreeve.app/assets/og-image.png"/>
-    <meta property="og:image:type" content="image/png"/>
-    <meta property="og:image:width" content="1200"/>
-    <meta property="og:image:height" content="630"/>
-    <meta property="og:image:alt" content="Dreeve logo"/>
-    <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:title" content="Get free Dreeve stickers"/>
-    <meta name="twitter:description" content="Leave your address and get a few free Dreeve stickers in the mail."/>
-    <meta name="twitter:image" content="https://dreeve.app/assets/og-image.png"/>
+---
+title: "Get Free Dreeve Stickers | Dreeve"
+description: "Love Dreeve? Leave your address and get a few free Dreeve stickers in the mail for your bike, laptop or water bottle."
+canonical: "https://dreeve.app/stickers"
+robots: "index, follow, max-image-preview:large"
+ogTitle: "Get free Dreeve stickers"
+ogDescription: "Leave your address and get a few free Dreeve stickers in the mail."
+twitterTitle: "Get free Dreeve stickers"
+twitterDescription: "Leave your address and get a few free Dreeve stickers in the mail."
+twitterImage: "https://dreeve.app/assets/og-image.png"
+---
+{% extends "layouts/base.njk" %}
 
-    <link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
-    <link href="dist/app.min.css?v=936ca75e" rel="stylesheet"/>
-    <script defer src="https://analytics.robiningelbrecht.be/script.js" data-website-id="38bb383d-32cf-4d59-aaa2-b6eceaa245e2" data-domains="dreeve.app"></script>
-</head>
-<body class="font-sans bg-white text-gray-900">
+{% block content %}
     <header class="md:sticky md:top-0 md:z-50 border-b border-gray-200/70 bg-white/85 backdrop-blur">
         <input type="checkbox" id="menu-toggle" class="peer hidden" aria-hidden="true">
         <nav class="max-w-6xl mx-auto px-4 sm:px-5 py-3 sm:py-4 flex items-center justify-between gap-3">
@@ -238,5 +219,4 @@
         new GitHubStars('dreeveapp/dreeve');
     </script>
     <script async src="https://tally.so/widgets/embed.js" onload="Tally.loadEmbeds()"></script>
-</body>
-</html>
+{%- endblock %}
