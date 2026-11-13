@@ -46,6 +46,7 @@
     {% set headerHtml %}{% include "partials/header.njk" %}{% endset %}{{ headerHtml | trim | safe }}
     {%- block content %}{% endblock %}
     {% set footerHtml %}{% include "partials/footer.njk" %}{% endset %}{{ footerHtml | trim | safe }}
+    {% set scriptsHtml %}{% include "partials/scripts.njk" %}{% endset %}{{ scriptsHtml | trim | safe }}
     {%- block scripts %}{% endblock %}
 </body>
 </html>

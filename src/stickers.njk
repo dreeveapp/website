@@ -41,56 +41,5 @@ twitterImage: "https://dreeve.app/assets/og-image.png"
 {% endblock %}
 
 {% block scripts %}
-    <script>
-        class GitHubStars {
-            constructor(repo, { target = '[data-github-stars]', ttl = 60 * 60 * 1000 } = {}) {
-                this.repo = repo;
-                this.targets = document.querySelectorAll(target);
-                this.ttl = ttl;
-                this.cacheKey = `github-stars:${repo}`;
-                if (this.targets.length) this.load();
-            }
-
-            async load() {
-                const cached = this.readCache();
-                if (cached !== null) return this.render(cached);
-
-                try {
-                    const response = await fetch(`https://api.github.com/repos/${this.repo}`);
-                    if (!response.ok) return;
-                    const { stargazers_count: stars } = await response.json();
-                    if (typeof stars !== 'number') return;
-                    this.writeCache(stars);
-                    this.render(stars);
-                } catch {
-                    // Keep the static fallback when GitHub is unreachable or rate limited.
-                }
-            }
-
-            render(stars) {
-                const formatted = new Intl.NumberFormat('en', { notation: 'compact', maximumFractionDigits: 1 })
-                    .format(stars)
-                    .toLowerCase();
-                this.targets.forEach((el) => { el.textContent = formatted; });
-            }
-
-            readCache() {
-                try {
-                    const { stars, at } = JSON.parse(localStorage.getItem(this.cacheKey)) ?? {};
-                    return typeof stars === 'number' && Date.now() - at < this.ttl ? stars : null;
-                } catch {
-                    return null;
-                }
-            }
-
-            writeCache(stars) {
-                try {
-                    localStorage.setItem(this.cacheKey, JSON.stringify({ stars, at: Date.now() }));
-                } catch {}
-            }
-        }
-
-        new GitHubStars('dreeveapp/dreeve');
-    </script>
     <script async src="https://tally.so/widgets/embed.js" onload="Tally.loadEmbeds()"></script>
 {%- endblock %}
