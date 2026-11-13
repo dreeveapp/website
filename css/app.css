@@ -6,9 +6,7 @@
 @import "./components/navigation.css";
 @import "./components/typography.css";
 
-@source "../index.html";
-@source "../strava-alternative.html";
-@source "../stickers.html";
+@source "../src/**/*.njk";
 
 @theme {
     --color-strava-orange: #F26822;
