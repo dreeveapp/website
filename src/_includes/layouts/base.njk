@@ -43,7 +43,9 @@
     <script defer src="https://analytics.robiningelbrecht.be/script.js" data-website-id="38bb383d-32cf-4d59-aaa2-b6eceaa245e2" data-domains="dreeve.app"></script>
 </head>
 <body class="font-sans bg-white text-gray-900">
-    {% include "partials/header.njk" %}
+    {% set headerHtml %}{% include "partials/header.njk" %}{% endset %}{{ headerHtml | trim | safe }}
     {%- block content %}{% endblock %}
+    {% set footerHtml %}{% include "partials/footer.njk" %}{% endset %}{{ footerHtml | trim | safe }}
+    {%- block scripts %}{% endblock %}
 </body>
 </html>
