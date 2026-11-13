@@ -1,7 +1,7 @@
 <footer class="bg-gray-100 text-gray-600">
         <div class="max-w-6xl mx-auto px-5 py-12 flex flex-col md:flex-row gap-10 justify-between">
             <div class="flex items-start gap-3 max-w-xs">
-                <img src="https://raw.githubusercontent.com/dreeveapp/dreeve/master/public/assets/images/logo.svg" alt="" class="size-8"/>
+                <img src="{{ site.logoUrl }}" alt="" class="size-8"/>
                 <div>
                     <div class="text-gray-900 font-bold text-sm">Dreeve</div>
                     <div class="text-xxs text-gray-500">Self-hosted, open-source dashboard for your sports and fitness data.</div>
@@ -14,7 +14,7 @@
                         <li><a href="/#features" class="footer-link">Features</a></li>
                         <li><a href="https://demo.dreeve.app" target="_blank" rel="noopener" class="footer-link">Live demo</a></li>
                         <li><a href="/#install" class="footer-link">Install</a></li>
-                        <li><a href="https://github.com/dreeveapp/dreeve/releases" target="_blank" rel="noopener" class="footer-link">Releases</a></li>
+                        <li><a href="{{ site.githubUrl }}/releases" target="_blank" rel="noopener" class="footer-link">Releases</a></li>
                     </ul>
                 </div>
                 <div>
@@ -22,7 +22,7 @@
                     <ul class="footer-links">
                         <li><a href="https://docs.dreeve.app" target="_blank" rel="noopener" class="footer-link">Documentation</a></li>
                         <li><a href="https://hub.docker.com/r/robiningelbrecht/dreeve" target="_blank" rel="noopener" class="footer-link">Docker Hub</a></li>
-                        <li><a href="https://github.com/dreeveapp/dreeve/pkgs/container/dreeve" target="_blank" rel="noopener" class="footer-link">GitHub Container Registry</a></li>
+                        <li><a href="{{ site.githubUrl }}/pkgs/container/dreeve" target="_blank" rel="noopener" class="footer-link">GitHub Container Registry</a></li>
                         <li><a href="/strava-alternative" class="footer-link">Strava alternative</a></li>
                         <li><a href="/stickers" class="footer-link">Free stickers</a></li>
                     </ul>
@@ -30,16 +30,16 @@
                 <div>
                     <h2 class="footer-heading">Community</h2>
                     <ul class="footer-links">
-                        <li><a href="https://github.com/dreeveapp/dreeve" target="_blank" rel="noopener" class="footer-link">GitHub</a></li>
-                        <li><a href="https://discord.gg/p4zpZyCHNc" target="_blank" rel="noopener" class="footer-link">Discord</a></li>
-                        <li><a href="https://github.com/dreeveapp/dreeve/issues/new/choose" target="_blank" rel="noopener" class="footer-link">Report a bug</a></li>
+                        <li><a href="{{ site.githubUrl }}" target="_blank" rel="noopener" class="footer-link">GitHub</a></li>
+                        <li><a href="{{ site.discordUrl }}" target="_blank" rel="noopener" class="footer-link">Discord</a></li>
+                        <li><a href="{{ site.githubUrl }}/issues/new/choose" target="_blank" rel="noopener" class="footer-link">Report a bug</a></li>
                     </ul>
                 </div>
                 <div>
                     <h2 class="footer-heading">Support</h2>
                     <ul class="footer-links">
                         <li><a href="https://www.buymeacoffee.com/ingelbrecht" target="_blank" rel="noopener" class="footer-link">Buy me a coffee</a></li>
-                        <li><a href="https://github.com/dreeveapp/dreeve" target="_blank" rel="noopener" class="footer-link">Star on GitHub</a></li>
+                        <li><a href="{{ site.githubUrl }}" target="_blank" rel="noopener" class="footer-link">Star on GitHub</a></li>
                     </ul>
                 </div>
             </div>
@@ -48,7 +48,7 @@
             <div class="max-w-6xl mx-auto px-5 py-4 text-xxs text-gray-500 flex flex-col sm:flex-row gap-2 sm:items-center justify-between">
                 <span>
                     &copy; Dreeve &middot;
-                    <a href="https://github.com/dreeveapp/dreeve/blob/master/LICENSE" target="_blank" rel="noopener" class="hover:text-gray-900">AGPL-3.0</a>
+                    <a href="{{ site.githubUrl }}/blob/master/LICENSE" target="_blank" rel="noopener" class="hover:text-gray-900">AGPL-3.0</a>
                     &middot; Formerly Statistics for Strava
                 </span>
                 <span class="flex items-center gap-1.5">
