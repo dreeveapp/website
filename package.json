@@ -1,7 +1,7 @@
 {
   "scripts": {
     "tailwind": "npx @tailwindcss/cli -i css/app.css -o dist/app.min.css --minify",
-    "build": "npm run tailwind && bash scripts/cachebust.sh && npx @11ty/eleventy",
+    "build": "npm run tailwind && npx @11ty/eleventy",
     "dev": "npx @11ty/eleventy --serve"
   },
   "devDependencies": {
