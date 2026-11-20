@@ -46,7 +46,7 @@ twitterImage: "https://dreeve.app/assets/og-image.png"
                 Every pin is a sticker someone stuck somewhere. Explore the map to see the photos.
             </p>
         </div>
-        <div id="sticker-map" class="sticker-map sticker-map--preview mt-8" aria-label="Preview of the world map of Dreeve stickers">
+        <div id="sticker-map" class="sticker-map sticker-map--preview mt-8" data-preview data-lazy aria-label="Preview of the world map of Dreeve stickers">
             <p class="sticker-map-placeholder">Loading map…</p>
         </div>
         <div class="mt-6 text-center">
@@ -58,6 +58,5 @@ twitterImage: "https://dreeve.app/assets/og-image.png"
 
 {% block scripts %}
     <script async src="https://tally.so/widgets/embed.js" onload="Tally.loadEmbeds()"></script>
-    {% set stickerMapOptions = { "preview": true, "lazy": true } %}
-    {% set stickerMapHtml %}{% include "partials/sticker-map.njk" %}{% endset %}{{ stickerMapHtml | trim | safe }}
+    <script defer src="assets/js/sticker-map.js?v={{ build.jsVersions.stickerMap }}"></script>
 {%- endblock %}

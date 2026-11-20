@@ -46,7 +46,7 @@
     {% set headerHtml %}{% include "partials/header.njk" %}{% endset %}{{ headerHtml | trim | safe }}
     {%- block content %}{% endblock %}
     {% block footer %}{% set footerHtml %}{% include "partials/footer.njk" %}{% endset %}{{ footerHtml | trim | safe }}{% endblock %}
-    {% set scriptsHtml %}{% include "partials/scripts.njk" %}{% endset %}{{ scriptsHtml | trim | safe }}
+    <script defer src="assets/js/github-stars.js?v={{ build.jsVersions.githubStars }}"></script>
     {%- block scripts %}{% endblock %}
 </body>
 </html>

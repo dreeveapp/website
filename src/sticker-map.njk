@@ -16,7 +16,7 @@ bodyClass: "h-dvh flex flex-col"
 
 <main class="relative flex-1 min-h-0">
     <h1 class="sr-only">Dreeve sticker map</h1>
-    <div id="sticker-map" class="sticker-map sticker-map--full" aria-label="World map of Dreeve stickers">
+    <div id="sticker-map" class="sticker-map sticker-map--full" data-deep-links aria-label="World map of Dreeve stickers">
         <p class="sticker-map-placeholder">Loading map…</p>
     </div>
     <div class="sticker-map-card text-center">
@@ -31,6 +31,5 @@ bodyClass: "h-dvh flex flex-col"
 {% block footer %}{% endblock %}
 
 {% block scripts %}
-    {% set stickerMapOptions = { "deepLinks": true } %}
-    {% set stickerMapHtml %}{% include "partials/sticker-map.njk" %}{% endset %}{{ stickerMapHtml | trim | safe }}
+    <script defer src="assets/js/sticker-map.js?v={{ build.jsVersions.stickerMap }}"></script>
 {%- endblock %}
