@@ -2,13 +2,15 @@
 title: "Dreeve Sticker Map | Dreeve"
 description: "Explore the world map of Dreeve stickers. Every pin is a free Dreeve sticker someone stuck somewhere on a ride, run or workout."
 canonical: "https://dreeve.app/sticker-map"
-robots: "index, follow, max-image-preview:large"
+robots: "noindex, follow"
 ogTitle: "Dreeve stickers around the globe"
 ogDescription: "Every pin is a Dreeve sticker someone stuck somewhere on a ride, run or workout."
 twitterTitle: "Dreeve stickers around the globe"
 twitterDescription: "Every pin is a Dreeve sticker someone stuck somewhere on a ride, run or workout."
 twitterImage: "https://dreeve.app/assets/og-image.png"
 bodyClass: "h-dvh flex flex-col"
+# Soft launch behind the sticker-map feature flag: keep it out of the sitemap.
+eleventyExcludeFromCollections: true
 ---
 {% extends "layouts/base.njk" %}
 
@@ -23,7 +25,7 @@ bodyClass: "h-dvh flex flex-col"
         <p class="text-sm font-semibold text-gray-900">
             <span class="text-strava-orange">{{ stickers | length }}</span> stickers around the globe
         </p>
-        <a href="/stickers" class="btn btn-primary mt-3 px-4 py-2">Get your sticker</a>
+        <a href="/stickers?feature=sticker-map" class="btn btn-primary mt-3 px-4 py-2">Get your sticker</a>
     </div>
 </main>
 {% endblock %}

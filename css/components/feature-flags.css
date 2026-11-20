@@ -1,0 +1,7 @@
+/* Feature flags are set as feature-<name> classes on <html> from ?feature=<name> by the inline script in base.njk.
+   CSS can't match a class name against an attribute value, so every flag is listed here.
+   Unlayered on purpose, so it wins over display utilities on the flagged elements. */
+html:not(.feature-sticker-map) [data-feature="sticker-map"],
+html.feature-sticker-map [data-feature-off="sticker-map"] {
+    display: none;
+}

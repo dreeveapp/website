@@ -4,6 +4,12 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script>
+        // Feature flags come only from the URL: ?feature=a&feature=b adds feature-a and feature-b classes to <html>.
+        for (const name of new URLSearchParams(location.search).getAll('feature')) {
+            if (/^[a-z0-9-]+$/.test(name)) document.documentElement.classList.add(`feature-${name}`);
+        }
+    </script>
     <title>Get Free Dreeve Stickers | Dreeve</title>
     <meta name="description" content="Love Dreeve? Leave your address and get a few free Dreeve stickers in the mail for your bike, laptop or water bottle."/>
     <link rel="canonical" href="https://dreeve.app/stickers"/>
@@ -30,7 +36,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
-    <link href="dist/app.min.css?v=43e6d064" rel="stylesheet"/>
+    <link href="dist/app.min.css?v=7d26a7ee" rel="stylesheet"/>
     <script defer src="https://analytics.robiningelbrecht.be/script.js" data-website-id="38bb383d-32cf-4d59-aaa2-b6eceaa245e2" data-domains="dreeve.app"></script>
 </head>
 <body class="font-sans bg-white text-gray-900">
@@ -110,7 +116,8 @@
                 Leave your address and we'll mail you a free Dreeve sticker.
                 Once it arrives, stick it anywhere you ride, run or workout, and send a photo
                 with the coordinates to <a href="mailto:hello@dreeve.app" class="inline-link">hello@dreeve.app</a>.
-                Your sticker then shows up on the map below :)
+                <span data-feature="sticker-map">Your sticker then shows up on the map below :)</span>
+                <span data-feature-off="sticker-map">Later on we'll build a map of Dreeve stickers around the globe :)</span>
             </p>
         </div>
         <div class="mt-10 max-w-2xl mx-auto">
@@ -123,7 +130,7 @@
             </p>
         </div>
     </section>
-    <section class="bg-white max-w-6xl mx-auto px-4 sm:px-5 pb-14 md:pb-20">
+    <section class="bg-white max-w-6xl mx-auto px-4 sm:px-5 pb-14 md:pb-20" data-feature="sticker-map">
         <div class="max-w-3xl mx-auto text-center">
             <h2 class="text-2xl md:text-3xl font-black text-gray-900 tracking-tight">
                 Dreeve stickers around the <span class="text-strava-orange">globe</span>
@@ -132,11 +139,11 @@
                 Every pin is a sticker someone stuck somewhere. Explore the map to see the photos.
             </p>
         </div>
-        <div id="sticker-map" class="sticker-map sticker-map--preview mt-8" data-preview data-lazy aria-label="Preview of the world map of Dreeve stickers">
+        <div id="sticker-map" class="sticker-map sticker-map--preview mt-8" data-preview data-lazy data-map-url="/sticker-map?feature=sticker-map" aria-label="Preview of the world map of Dreeve stickers">
             <p class="sticker-map-placeholder">Loading map…</p>
         </div>
         <div class="mt-6 text-center">
-            <a href="/sticker-map" class="btn btn-outline">Explore the map</a>
+            <a href="/sticker-map?feature=sticker-map" class="btn btn-outline">Explore the map</a>
         </div>
     </section>
 </main>
@@ -168,7 +175,7 @@
                         <li><a href="https://github.com/dreeveapp/dreeve/pkgs/container/dreeve" target="_blank" rel="noopener" class="footer-link">GitHub Container Registry</a></li>
                         <li><a href="/strava-alternative" class="footer-link">Strava alternative</a></li>
                         <li><a href="/stickers" class="footer-link">Free stickers</a></li>
-                        <li><a href="/sticker-map" class="footer-link">Sticker map</a></li>
+                        <li data-feature="sticker-map"><a href="/sticker-map?feature=sticker-map" class="footer-link">Sticker map</a></li>
                     </ul>
                 </div>
                 <div>
@@ -208,6 +215,6 @@
     </footer>
     <script defer src="assets/js/github-stars.js?v=d171bc3d"></script>
     <script async src="https://tally.so/widgets/embed.js" onload="Tally.loadEmbeds()"></script>
-    <script defer src="assets/js/sticker-map.js?v=5506f898"></script>
+    <script defer src="assets/js/sticker-map.js?v=c56ddc32"></script>
 </body>
 </html>

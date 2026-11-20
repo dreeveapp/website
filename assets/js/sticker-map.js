@@ -273,8 +273,9 @@ class StickerMap {
 
 const stickerMapContainer = document.getElementById('sticker-map');
 if (stickerMapContainer) {
-    const { preview, lazy, deepLinks } = stickerMapContainer.dataset;
+    const { preview, lazy, deepLinks, mapUrl } = stickerMapContainer.dataset;
     new StickerMap(stickerMapContainer, {
+        mapUrl,
         preview: preview !== undefined,
         lazy: lazy !== undefined,
         deepLinks: deepLinks !== undefined,

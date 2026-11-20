@@ -4,6 +4,12 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script>
+        // Feature flags come only from the URL: ?feature=a&feature=b adds feature-a and feature-b classes to <html>.
+        for (const name of new URLSearchParams(location.search).getAll('feature')) {
+            if (/^[a-z0-9-]+$/.test(name)) document.documentElement.classList.add(`feature-${name}`);
+        }
+    </script>
     <title>{{ title }}</title>
     <meta name="description" content="{{ description }}"/>
     <link rel="canonical" href="{{ canonical }}"/>

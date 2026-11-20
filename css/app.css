@@ -6,6 +6,7 @@
 @import "./components/navigation.css";
 @import "./components/typography.css";
 @import "./components/sticker-map.css";
+@import "./components/feature-flags.css";
 
 @source "../src/**/*.njk";
 
