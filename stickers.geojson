@@ -11,7 +11,7 @@
                 "id": "ghent-be",
                 "place": "Ghent, Belgium",
                 "date": "2026-03-14",
-                "photo": "assets/dreeve-stickers.jpg"
+                "photo": "assets/stickers/ghent-be.jpg"
             }
         },
         {
@@ -24,7 +24,7 @@
                 "id": "bruges-be",
                 "place": "Bruges, Belgium",
                 "date": "2026-04-02",
-                "photo": "assets/dreeve-stickers.jpg"
+                "photo": "assets/stickers/bruges-be.jpg"
             }
         },
         {
@@ -37,7 +37,7 @@
                 "id": "antwerp-be",
                 "place": "Antwerp, Belgium",
                 "date": "2026-04-19",
-                "photo": "assets/dreeve-stickers.jpg"
+                "photo": "assets/stickers/antwerp-be.jpg"
             }
         },
         {
@@ -50,7 +50,7 @@
                 "id": "brussels-be",
                 "place": "Brussels, Belgium",
                 "date": "2026-05-06",
-                "photo": "assets/dreeve-stickers.jpg"
+                "photo": "assets/stickers/brussels-be.jpg"
             }
         },
         {
@@ -63,7 +63,7 @@
                 "id": "leuven-be",
                 "place": "Leuven, Belgium",
                 "date": "2026-05-21",
-                "photo": "assets/dreeve-stickers.jpg"
+                "photo": "assets/stickers/leuven-be.jpg"
             }
         },
         {
@@ -76,7 +76,7 @@
                 "id": "kortrijk-be",
                 "place": "Kortrijk, Belgium",
                 "date": "2026-06-08",
-                "photo": "assets/dreeve-stickers.jpg"
+                "photo": "assets/stickers/kortrijk-be.jpg"
             }
         },
         {
@@ -89,7 +89,7 @@
                 "id": "tromso-no",
                 "place": "Tromsø, Norway",
                 "date": "2026-01-22",
-                "photo": "assets/dreeve-stickers.jpg"
+                "photo": "assets/stickers/tromso-no.jpg"
             }
         },
         {
@@ -102,7 +102,7 @@
                 "id": "reykjavik-is",
                 "place": "Reykjavík, Iceland",
                 "date": "2025-08-09",
-                "photo": "assets/dreeve-stickers.jpg"
+                "photo": "assets/stickers/reykjavik-is.jpg"
             }
         },
         {
@@ -115,7 +115,7 @@
                 "id": "anchorage-us",
                 "place": "Anchorage, Alaska, USA",
                 "date": "2025-07-02",
-                "photo": "assets/dreeve-stickers.jpg"
+                "photo": "assets/stickers/anchorage-us.jpg"
             }
         },
         {
@@ -128,7 +128,7 @@
                 "id": "nome-us",
                 "place": "Nome, Alaska, USA",
                 "date": "2025-09-18",
-                "photo": "assets/dreeve-stickers.jpg"
+                "photo": "assets/stickers/nome-us.jpg"
             }
         },
         {
@@ -141,7 +141,7 @@
                 "id": "boulder-us",
                 "place": "Boulder, Colorado, USA",
                 "date": "2026-05-03",
-                "photo": "assets/dreeve-stickers.jpg"
+                "photo": "assets/stickers/boulder-us.jpg"
             }
         },
         {
@@ -154,7 +154,7 @@
                 "id": "mexico-city-mx",
                 "place": "Mexico City, Mexico",
                 "date": "2025-12-11",
-                "photo": "assets/dreeve-stickers.jpg"
+                "photo": "assets/stickers/mexico-city-mx.jpg"
             }
         },
         {
@@ -167,7 +167,7 @@
                 "id": "cusco-pe",
                 "place": "Cusco, Peru",
                 "date": "2026-02-27",
-                "photo": "assets/dreeve-stickers.jpg"
+                "photo": "assets/stickers/cusco-pe.jpg"
             }
         },
         {
@@ -180,7 +180,7 @@
                 "id": "ushuaia-ar",
                 "place": "Ushuaia, Argentina",
                 "date": "2026-01-05",
-                "photo": "assets/dreeve-stickers.jpg"
+                "photo": "assets/stickers/ushuaia-ar.jpg"
             }
         },
         {
@@ -193,7 +193,7 @@
                 "id": "torres-del-paine-cl",
                 "place": "Torres del Paine, Chile",
                 "date": "2025-11-20",
-                "photo": "assets/dreeve-stickers.jpg"
+                "photo": "assets/stickers/torres-del-paine-cl.jpg"
             }
         },
         {
@@ -206,7 +206,7 @@
                 "id": "cape-town-za",
                 "place": "Cape Town, South Africa",
                 "date": "2025-10-14",
-                "photo": "assets/dreeve-stickers.jpg"
+                "photo": "assets/stickers/cape-town-za.jpg"
             }
         },
         {
@@ -219,7 +219,7 @@
                 "id": "nairobi-ke",
                 "place": "Nairobi, Kenya",
                 "date": "2026-04-08",
-                "photo": "assets/dreeve-stickers.jpg"
+                "photo": "assets/stickers/nairobi-ke.jpg"
             }
         },
         {
@@ -232,7 +232,7 @@
                 "id": "marrakech-ma",
                 "place": "Marrakech, Morocco",
                 "date": "2025-06-21",
-                "photo": "assets/dreeve-stickers.jpg"
+                "photo": "assets/stickers/marrakech-ma.jpg"
             }
         },
         {
@@ -245,7 +245,7 @@
                 "id": "tokyo-jp",
                 "place": "Tokyo, Japan",
                 "date": "2026-06-30",
-                "photo": "assets/dreeve-stickers.jpg"
+                "photo": "assets/stickers/tokyo-jp.jpg"
             }
         },
         {
@@ -258,7 +258,7 @@
                 "id": "kathmandu-np",
                 "place": "Kathmandu, Nepal",
                 "date": "2025-10-29",
-                "photo": "assets/dreeve-stickers.jpg"
+                "photo": "assets/stickers/kathmandu-np.jpg"
             }
         },
         {
@@ -271,7 +271,7 @@
                 "id": "singapore-sg",
                 "place": "Singapore",
                 "date": "2026-07-16",
-                "photo": "assets/dreeve-stickers.jpg"
+                "photo": "assets/stickers/singapore-sg.jpg"
             }
         },
         {
@@ -284,7 +284,7 @@
                 "id": "hobart-au",
                 "place": "Hobart, Tasmania, Australia",
                 "date": "2026-02-02",
-                "photo": "assets/dreeve-stickers.jpg"
+                "photo": "assets/stickers/hobart-au.jpg"
             }
         },
         {
@@ -297,7 +297,7 @@
                 "id": "queenstown-nz",
                 "place": "Queenstown, New Zealand",
                 "date": "2025-12-28",
-                "photo": "assets/dreeve-stickers.jpg"
+                "photo": "assets/stickers/queenstown-nz.jpg"
             }
         },
         {
@@ -310,7 +310,7 @@
                 "id": "suva-fj",
                 "place": "Suva, Fiji",
                 "date": "2026-08-12",
-                "photo": "assets/dreeve-stickers.jpg"
+                "photo": "assets/stickers/suva-fj.jpg"
             }
         },
         {
@@ -323,7 +323,7 @@
                 "id": "taveuni-fj",
                 "place": "Taveuni, Fiji",
                 "date": "2026-08-15",
-                "photo": "assets/dreeve-stickers.jpg"
+                "photo": "assets/stickers/taveuni-fj.jpg"
             }
         }
     ]

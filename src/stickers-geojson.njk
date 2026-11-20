@@ -13,7 +13,7 @@ eleventyExcludeFromCollections: true
                 "coordinates": [{{ sticker.lng | dump | safe }}, {{ sticker.lat | dump | safe }}]
             },
             "properties": {
-                "id": {{ sticker.id | dump | safe }},
+                "id": {{ sticker.photo | replace(r/^.*\/|\.[^.]+$/g, "") | dump | safe }},
                 "place": {{ sticker.place | dump | safe }},
                 "date": {{ sticker.date | dump | safe }},
                 "photo": {{ sticker.photo | dump | safe }}
