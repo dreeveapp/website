@@ -1,0 +1,24 @@
+---
+permalink: stickers.geojson
+eleventyExcludeFromCollections: true
+---
+{
+    "type": "FeatureCollection",
+    "features": [
+{%- for sticker in stickers %}
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [{{ sticker.lng | dump | safe }}, {{ sticker.lat | dump | safe }}]
+            },
+            "properties": {
+                "id": {{ sticker.id | dump | safe }},
+                "place": {{ sticker.place | dump | safe }},
+                "date": {{ sticker.date | dump | safe }},
+                "photo": {{ sticker.photo | dump | safe }}
+            }
+        }{% if not loop.last %},{% endif %}
+{%- endfor %}
+    ]
+}

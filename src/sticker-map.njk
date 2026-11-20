@@ -1,0 +1,36 @@
+---
+title: "Dreeve Sticker Map | Dreeve"
+description: "Explore the world map of Dreeve stickers. Every pin is a free Dreeve sticker someone stuck somewhere on a ride, run or workout."
+canonical: "https://dreeve.app/sticker-map"
+robots: "index, follow, max-image-preview:large"
+ogTitle: "Dreeve stickers around the globe"
+ogDescription: "Every pin is a Dreeve sticker someone stuck somewhere on a ride, run or workout."
+twitterTitle: "Dreeve stickers around the globe"
+twitterDescription: "Every pin is a Dreeve sticker someone stuck somewhere on a ride, run or workout."
+twitterImage: "https://dreeve.app/assets/og-image.png"
+bodyClass: "h-dvh flex flex-col"
+---
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+
+<main class="relative flex-1 min-h-0">
+    <h1 class="sr-only">Dreeve sticker map</h1>
+    <div id="sticker-map" class="sticker-map sticker-map--full" aria-label="World map of Dreeve stickers">
+        <p class="sticker-map-placeholder">Loading map…</p>
+    </div>
+    <div class="sticker-map-card text-center">
+        <p class="text-sm font-semibold text-gray-900">
+            <span class="text-strava-orange">{{ stickers | length }}</span> stickers around the globe
+        </p>
+        <a href="/stickers" class="btn btn-primary mt-3 px-4 py-2">Get your sticker</a>
+    </div>
+</main>
+{% endblock %}
+
+{% block footer %}{% endblock %}
+
+{% block scripts %}
+    {% set stickerMapOptions = { "deepLinks": true } %}
+    {% set stickerMapHtml %}{% include "partials/sticker-map.njk" %}{% endset %}{{ stickerMapHtml | trim | safe }}
+{%- endblock %}

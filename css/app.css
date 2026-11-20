@@ -5,6 +5,7 @@
 @import "./components/dialog.css";
 @import "./components/navigation.css";
 @import "./components/typography.css";
+@import "./components/sticker-map.css";
 
 @source "../src/**/*.njk";
 

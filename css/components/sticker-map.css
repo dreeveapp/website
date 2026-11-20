@@ -1,0 +1,55 @@
+@layer components {
+    .sticker-map {
+        @apply relative w-full overflow-hidden bg-gray-50;
+    }
+
+    .sticker-map--preview {
+        @apply h-64 md:h-80 rounded-xl ring-1 ring-gray-200 cursor-pointer;
+    }
+
+    .sticker-map--full {
+        @apply h-full;
+    }
+
+    .sticker-map-card {
+        @apply absolute top-3 left-3 z-10 max-w-[calc(100%-1.5rem)] rounded-xl bg-white/95 p-4 shadow-lg ring-1 ring-gray-200 backdrop-blur;
+    }
+
+    .sticker-map-placeholder {
+        @apply absolute inset-0 flex items-center justify-center text-sm text-gray-400;
+    }
+
+    .sticker-pin {
+        @apply block w-10 h-10 p-0 bg-transparent border-0 cursor-pointer;
+
+        span {
+            @apply block w-full h-full rounded-full border-[3px] border-strava-orange bg-white bg-cover bg-center shadow-md origin-center transition-[scale];
+        }
+
+        &:hover span {
+            @apply scale-110;
+        }
+    }
+
+    .sticker-popup {
+        .maplibregl-popup-content {
+            @apply p-0 rounded-lg overflow-hidden shadow-lg;
+        }
+
+        img {
+            @apply block w-56 h-40 md:h-56 object-cover;
+        }
+
+        figcaption {
+            @apply px-3 py-2;
+        }
+
+        strong {
+            @apply block text-sm font-semibold text-gray-900;
+        }
+
+        time {
+            @apply block text-xs text-gray-500;
+        }
+    }
+}

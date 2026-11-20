@@ -1,0 +1,330 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [3.72, 51.05]
+            },
+            "properties": {
+                "id": "ghent-be",
+                "place": "Ghent, Belgium",
+                "date": "2026-03-14",
+                "photo": "assets/dreeve-stickers.jpg"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [3.22, 51.21]
+            },
+            "properties": {
+                "id": "bruges-be",
+                "place": "Bruges, Belgium",
+                "date": "2026-04-02",
+                "photo": "assets/dreeve-stickers.jpg"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [4.4, 51.22]
+            },
+            "properties": {
+                "id": "antwerp-be",
+                "place": "Antwerp, Belgium",
+                "date": "2026-04-19",
+                "photo": "assets/dreeve-stickers.jpg"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [4.35, 50.85]
+            },
+            "properties": {
+                "id": "brussels-be",
+                "place": "Brussels, Belgium",
+                "date": "2026-05-06",
+                "photo": "assets/dreeve-stickers.jpg"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [4.7, 50.88]
+            },
+            "properties": {
+                "id": "leuven-be",
+                "place": "Leuven, Belgium",
+                "date": "2026-05-21",
+                "photo": "assets/dreeve-stickers.jpg"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [3.26, 50.83]
+            },
+            "properties": {
+                "id": "kortrijk-be",
+                "place": "Kortrijk, Belgium",
+                "date": "2026-06-08",
+                "photo": "assets/dreeve-stickers.jpg"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [18.96, 69.65]
+            },
+            "properties": {
+                "id": "tromso-no",
+                "place": "Tromsø, Norway",
+                "date": "2026-01-22",
+                "photo": "assets/dreeve-stickers.jpg"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-21.94, 64.15]
+            },
+            "properties": {
+                "id": "reykjavik-is",
+                "place": "Reykjavík, Iceland",
+                "date": "2025-08-09",
+                "photo": "assets/dreeve-stickers.jpg"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-149.9, 61.22]
+            },
+            "properties": {
+                "id": "anchorage-us",
+                "place": "Anchorage, Alaska, USA",
+                "date": "2025-07-02",
+                "photo": "assets/dreeve-stickers.jpg"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-165.41, 64.5]
+            },
+            "properties": {
+                "id": "nome-us",
+                "place": "Nome, Alaska, USA",
+                "date": "2025-09-18",
+                "photo": "assets/dreeve-stickers.jpg"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-105.27, 40.01]
+            },
+            "properties": {
+                "id": "boulder-us",
+                "place": "Boulder, Colorado, USA",
+                "date": "2026-05-03",
+                "photo": "assets/dreeve-stickers.jpg"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-99.13, 19.43]
+            },
+            "properties": {
+                "id": "mexico-city-mx",
+                "place": "Mexico City, Mexico",
+                "date": "2025-12-11",
+                "photo": "assets/dreeve-stickers.jpg"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-71.97, -13.53]
+            },
+            "properties": {
+                "id": "cusco-pe",
+                "place": "Cusco, Peru",
+                "date": "2026-02-27",
+                "photo": "assets/dreeve-stickers.jpg"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-68.3, -54.8]
+            },
+            "properties": {
+                "id": "ushuaia-ar",
+                "place": "Ushuaia, Argentina",
+                "date": "2026-01-05",
+                "photo": "assets/dreeve-stickers.jpg"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73, -51]
+            },
+            "properties": {
+                "id": "torres-del-paine-cl",
+                "place": "Torres del Paine, Chile",
+                "date": "2025-11-20",
+                "photo": "assets/dreeve-stickers.jpg"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [18.42, -33.92]
+            },
+            "properties": {
+                "id": "cape-town-za",
+                "place": "Cape Town, South Africa",
+                "date": "2025-10-14",
+                "photo": "assets/dreeve-stickers.jpg"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [36.82, -1.29]
+            },
+            "properties": {
+                "id": "nairobi-ke",
+                "place": "Nairobi, Kenya",
+                "date": "2026-04-08",
+                "photo": "assets/dreeve-stickers.jpg"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-7.99, 31.63]
+            },
+            "properties": {
+                "id": "marrakech-ma",
+                "place": "Marrakech, Morocco",
+                "date": "2025-06-21",
+                "photo": "assets/dreeve-stickers.jpg"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [139.69, 35.68]
+            },
+            "properties": {
+                "id": "tokyo-jp",
+                "place": "Tokyo, Japan",
+                "date": "2026-06-30",
+                "photo": "assets/dreeve-stickers.jpg"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [85.32, 27.72]
+            },
+            "properties": {
+                "id": "kathmandu-np",
+                "place": "Kathmandu, Nepal",
+                "date": "2025-10-29",
+                "photo": "assets/dreeve-stickers.jpg"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [103.82, 1.35]
+            },
+            "properties": {
+                "id": "singapore-sg",
+                "place": "Singapore",
+                "date": "2026-07-16",
+                "photo": "assets/dreeve-stickers.jpg"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [147.33, -42.88]
+            },
+            "properties": {
+                "id": "hobart-au",
+                "place": "Hobart, Tasmania, Australia",
+                "date": "2026-02-02",
+                "photo": "assets/dreeve-stickers.jpg"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [168.66, -45.03]
+            },
+            "properties": {
+                "id": "queenstown-nz",
+                "place": "Queenstown, New Zealand",
+                "date": "2025-12-28",
+                "photo": "assets/dreeve-stickers.jpg"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [178.44, -18.14]
+            },
+            "properties": {
+                "id": "suva-fj",
+                "place": "Suva, Fiji",
+                "date": "2026-08-12",
+                "photo": "assets/dreeve-stickers.jpg"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-179.97, -16.86]
+            },
+            "properties": {
+                "id": "taveuni-fj",
+                "place": "Taveuni, Fiji",
+                "date": "2026-08-15",
+                "photo": "assets/dreeve-stickers.jpg"
+            }
+        }
+    ]
+}
