@@ -1,0 +1,54 @@
+---
+title: "Send In Your Sticker Photo | Dreeve"
+description: "Stuck a Dreeve sticker somewhere? Send in a photo with the coordinates and your sticker shows up on the map of Dreeve stickers around the globe."
+canonical: "https://dreeve.app/sticker-photo"
+robots: "noindex, follow"
+ogTitle: "Send in your Dreeve sticker photo"
+ogDescription: "Send in a photo of your Dreeve sticker with the coordinates and it shows up on the map."
+twitterTitle: "Send in your Dreeve sticker photo"
+twitterDescription: "Send in a photo of your Dreeve sticker with the coordinates and it shows up on the map."
+twitterImage: "https://dreeve.app/assets/og-image.png"
+# Soft launch behind the sticker-map feature flag: keep it out of the sitemap.
+eleventyExcludeFromCollections: true
+---
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+
+<main>
+    <section class="bg-white max-w-6xl mx-auto px-4 sm:px-5 pt-10 pb-14 md:pt-14 md:pb-20">
+        <div class="max-w-3xl mx-auto text-center">
+            <span class="eyebrow">Sticker photo</span>
+            <h1 class="mt-4 text-[1.75rem] sm:text-3xl md:text-4xl font-black text-gray-900 leading-[1.1] tracking-tight max-w-4xl mx-auto">
+                Send in your sticker <span class="text-strava-orange">photo</span>
+            </h1>
+            <p class="mt-4 text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
+                Stuck your Dreeve sticker somewhere? Send us a photo with the coordinates of the spot,
+                and your sticker shows up on the map of Dreeve stickers around the globe.
+            </p>
+        </div>
+        <div class="mt-10 max-w-2xl mx-auto">
+            <ul class="space-y-3 text-sm text-gray-600">
+                <li>
+                    <span class="font-semibold text-gray-900">Finding the coordinates.</span>
+                    In Google Maps, long-press the spot and copy the numbers at the top, for example <code>51.0543, 3.7174</code>.
+                </li>
+                <li>
+                    <span class="font-semibold text-gray-900">Not at home.</span>
+                    Please don't use your home location. Published locations are rounded to about 1 km.
+                </li>
+                <li>
+                    <span class="font-semibold text-gray-900">No recognisable faces.</span>
+                    Don't send photos where other people's faces can be recognised.
+                </li>
+            </ul>
+            <iframe data-tally-src="https://tally.so/embed/kbNXLZ?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;dynamicHeight=1"
+                    loading="lazy" width="100%" height="500" frameborder="0" title="Sticker photo form" class="mt-10"></iframe>
+        </div>
+    </section>
+</main>
+{% endblock %}
+
+{% block scripts %}
+    <script async src="https://tally.so/widgets/embed.js" onload="Tally.loadEmbeds()"></script>
+{%- endblock %}
