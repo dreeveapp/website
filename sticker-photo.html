@@ -11,9 +11,9 @@
         }
     </script>
     <title>Send In Your Sticker Photo | Dreeve</title>
-    <meta name="description" content="Stuck a Dreeve sticker somewhere? Send in a photo with the coordinates and your sticker shows up on the map of Dreeve stickers around the globe."/>
+    <meta name="description" content="Stuck a Dreeve sticker somewhere? Send in a photo of it with the coordinates of the spot."/>
     <link rel="canonical" href="https://dreeve.app/sticker-photo"/>
-    <meta name="robots" content="noindex, follow"/>
+    <meta name="robots" content="index, follow"/>
 
     <link rel="icon" type="image/svg+xml" href="https://raw.githubusercontent.com/dreeveapp/dreeve/master/public/assets/images/logo.svg"/>
     <meta name="theme-color" content="#F26822"/>
@@ -21,7 +21,7 @@
     <meta property="og:type" content="website"/>
     <meta property="og:site_name" content="Dreeve"/>
     <meta property="og:title" content="Send in your Dreeve sticker photo"/>
-    <meta property="og:description" content="Send in a photo of your Dreeve sticker with the coordinates and it shows up on the map."/>
+    <meta property="og:description" content="Send in a photo of your Dreeve sticker with the coordinates of the spot."/>
     <meta property="og:url" content="https://dreeve.app/sticker-photo"/>
     <meta property="og:image" content="https://dreeve.app/assets/og-image.png"/>
     <meta property="og:image:type" content="image/png"/>
@@ -30,7 +30,7 @@
     <meta property="og:image:alt" content="Dreeve logo"/>
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:title" content="Send in your Dreeve sticker photo"/>
-    <meta name="twitter:description" content="Send in a photo of your Dreeve sticker with the coordinates and it shows up on the map."/>
+    <meta name="twitter:description" content="Send in a photo of your Dreeve sticker with the coordinates of the spot."/>
     <meta name="twitter:image" content="https://dreeve.app/assets/og-image.png"/>
 
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -113,8 +113,9 @@
                 Send in your sticker <span class="text-strava-orange">photo</span>
             </h1>
             <p class="mt-4 text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
-                Stuck your Dreeve sticker somewhere? Send us a photo with the coordinates of the spot,
-                and your sticker shows up on the map of Dreeve stickers around the globe.
+                Stuck your Dreeve sticker somewhere? Send us a photo with the coordinates of the spot.
+                <span data-feature="sticker-map">Your sticker then shows up on the <a href="/sticker-map?feature=sticker-map" class="inline-link">map of Dreeve stickers around the globe</a>.</span>
+                <span data-feature-off="sticker-map">Later on we'll build a map of Dreeve stickers around the globe.</span>
             </p>
         </div>
         <div class="mt-10 max-w-2xl mx-auto">

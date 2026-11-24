@@ -1,15 +1,13 @@
 ---
 title: "Send In Your Sticker Photo | Dreeve"
-description: "Stuck a Dreeve sticker somewhere? Send in a photo with the coordinates and your sticker shows up on the map of Dreeve stickers around the globe."
+description: "Stuck a Dreeve sticker somewhere? Send in a photo of it with the coordinates of the spot."
 canonical: "https://dreeve.app/sticker-photo"
-robots: "noindex, follow"
+robots: "index, follow"
 ogTitle: "Send in your Dreeve sticker photo"
-ogDescription: "Send in a photo of your Dreeve sticker with the coordinates and it shows up on the map."
+ogDescription: "Send in a photo of your Dreeve sticker with the coordinates of the spot."
 twitterTitle: "Send in your Dreeve sticker photo"
-twitterDescription: "Send in a photo of your Dreeve sticker with the coordinates and it shows up on the map."
+twitterDescription: "Send in a photo of your Dreeve sticker with the coordinates of the spot."
 twitterImage: "https://dreeve.app/assets/og-image.png"
-# Soft launch behind the sticker-map feature flag: keep it out of the sitemap.
-eleventyExcludeFromCollections: true
 ---
 {% extends "layouts/base.njk" %}
 
@@ -23,8 +21,9 @@ eleventyExcludeFromCollections: true
                 Send in your sticker <span class="text-strava-orange">photo</span>
             </h1>
             <p class="mt-4 text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
-                Stuck your Dreeve sticker somewhere? Send us a photo with the coordinates of the spot,
-                and your sticker shows up on the map of Dreeve stickers around the globe.
+                Stuck your Dreeve sticker somewhere? Send us a photo with the coordinates of the spot.
+                <span data-feature="sticker-map">Your sticker then shows up on the <a href="/sticker-map?feature=sticker-map" class="inline-link">map of Dreeve stickers around the globe</a>.</span>
+                <span data-feature-off="sticker-map">Later on we'll build a map of Dreeve stickers around the globe.</span>
             </p>
         </div>
         <div class="mt-10 max-w-2xl mx-auto">
