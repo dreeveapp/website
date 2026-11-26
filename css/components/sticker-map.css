@@ -67,18 +67,31 @@
     }
 
     .sticker-picker-readout {
-        @apply mt-3 flex flex-wrap items-center justify-between gap-3 text-sm text-gray-500;
+        @apply mt-4 text-sm text-gray-600;
     }
 
-    .sticker-picker-coordinates.is-set {
-        @apply font-mono font-semibold text-gray-900;
+    .sticker-picker-row {
+        @apply flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between;
     }
 
+    .sticker-picker-coordinates {
+        @apply min-w-0;
+
+        &.is-set {
+            @apply font-semibold text-gray-900 tabular-nums;
+        }
+    }
+
+    /* On mobile the buttons share the full width; from sm up they sit on the right of the coordinates. */
     .sticker-picker-actions {
-        @apply flex flex-wrap gap-3;
+        @apply flex gap-2 sm:shrink-0;
+
+        .btn {
+            @apply flex-1 justify-center sm:flex-none;
+        }
     }
 
     .sticker-picker-error {
-        @apply basis-full text-red-600;
+        @apply mt-2 text-red-600;
     }
 }
