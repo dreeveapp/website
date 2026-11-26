@@ -73,4 +73,12 @@
     .sticker-picker-coordinates.is-set {
         @apply font-mono font-semibold text-gray-900;
     }
+
+    .sticker-picker-actions {
+        @apply flex flex-wrap gap-3;
+    }
+
+    .sticker-picker-error {
+        @apply basis-full text-red-600;
+    }
 }

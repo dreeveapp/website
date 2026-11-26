@@ -47,7 +47,11 @@ twitterImage: "https://dreeve.app/assets/og-image.png"
             </div>
             <div id="sticker-photo-picker-readout" class="sticker-picker-readout">
                 <span class="sticker-picker-coordinates" data-coordinates aria-live="polite">Click the map to place a pin on your sticker's spot.</span>
-                <button type="button" class="btn btn-outline px-4 py-2" data-copy disabled>Copy coordinates</button>
+                <div class="sticker-picker-actions">
+                    <button type="button" class="btn btn-outline px-4 py-2" data-locate hidden>Use my location</button>
+                    <button type="button" class="btn btn-outline px-4 py-2" data-copy disabled>Copy coordinates</button>
+                </div>
+                <p class="sticker-picker-error" data-location-error role="alert" hidden></p>
             </div>
             <iframe data-tally-src="https://tally.so/embed/kbNXLZ?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;dynamicHeight=1"
                     loading="lazy" width="100%" height="500" frameborder="0" title="Sticker photo form" class="mt-10"></iframe>

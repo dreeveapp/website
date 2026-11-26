@@ -4,6 +4,12 @@ class StickerPhotoPicker {
     static COPIED_DURATION = 1500;
     // Close enough to see streets, while keeping the surroundings in view.
     static PICK_ZOOM = 13;
+    static LOCATION_TIMEOUT = 10000;
+    static LOCATION_ERRORS = {
+        1: 'Location access was denied. Click the map to place the pin instead.',
+        2: 'Your location could not be found. Click the map to place the pin instead.',
+        3: 'Finding your location took too long. Try again or click the map.',
+    };
     // The tip of the pin is the bottom centre of the 24x32 box, which is where anchor 'bottom' puts the coordinates.
     static PIN_SVG = '<svg viewBox="0 0 24 32" width="24" height="32" aria-hidden="true">'
         + '<path d="M12 32C12 32 0 19.5 0 12a12 12 0 0 1 24 0c0 7.5-12 20-12 20z" fill="#fff"/>'
@@ -16,9 +22,13 @@ class StickerPhotoPicker {
         this.coordinates = readout.querySelector('[data-coordinates]');
         this.copyButton = readout.querySelector('[data-copy]');
         this.copyLabel = this.copyButton.textContent;
+        this.locateButton = readout.querySelector('[data-locate]');
+        this.locateLabel = this.locateButton.textContent;
+        this.locationError = readout.querySelector('[data-location-error]');
         this.marker = null;
 
         this.copyButton.addEventListener('click', () => this.copy());
+        this.locateButton.addEventListener('click', () => this.locate());
         this.observeViewport();
     }
 
@@ -72,6 +82,40 @@ class StickerPhotoPicker {
             this.placePin(event.lngLat);
             this.zoomTo(event.lngLat);
         });
+        // Only offer the button once there is a map to put the pin on.
+        this.locateButton.hidden = !('geolocation' in navigator);
+    }
+
+    locate() {
+        this.locationError.hidden = true;
+        this.locateButton.disabled = true;
+        this.locateButton.textContent = 'Locating…';
+
+        const done = () => {
+            this.locateButton.disabled = false;
+            this.locateButton.textContent = this.locateLabel;
+        };
+
+        navigator.geolocation.getCurrentPosition(
+            (position) => {
+                done();
+                const lngLat = [position.coords.longitude, position.coords.latitude];
+                this.placePin(lngLat);
+                // Unlike a click, the location can be outside the current view, so always centre on it.
+                this.map.flyTo({
+                    center: lngLat,
+                    zoom: Math.max(this.map.getZoom(), StickerPhotoPicker.PICK_ZOOM),
+                    essential: true,
+                });
+            },
+            (error) => {
+                done();
+                this.locationError.textContent = StickerPhotoPicker.LOCATION_ERRORS[error.code]
+                    ?? StickerPhotoPicker.LOCATION_ERRORS[2];
+                this.locationError.hidden = false;
+            },
+            { enableHighAccuracy: true, timeout: StickerPhotoPicker.LOCATION_TIMEOUT },
+        );
     }
 
     placePin(lngLat) {
@@ -98,6 +142,7 @@ class StickerPhotoPicker {
         const { lat, lng } = this.marker.getLngLat().wrap();
         this.coordinates.textContent = `${lat.toFixed(4)}, ${lng.toFixed(4)}`;
         this.coordinates.classList.add('is-set');
+        this.locationError.hidden = true;
         this.copyButton.disabled = false;
     }
 
