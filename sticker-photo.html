@@ -36,7 +36,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
-    <link href="dist/app.min.css?v=7d26a7ee" rel="stylesheet"/>
+    <link href="dist/app.min.css?v=5fe9646d" rel="stylesheet"/>
     <script defer src="https://analytics.robiningelbrecht.be/script.js" data-website-id="38bb383d-32cf-4d59-aaa2-b6eceaa245e2" data-domains="dreeve.app"></script>
 </head>
 <body class="font-sans bg-white text-gray-900">
@@ -122,7 +122,8 @@
             <ul class="space-y-3 text-sm text-gray-600">
                 <li>
                     <span class="font-semibold text-gray-900">Finding the coordinates.</span>
-                    In Google Maps, long-press the spot and copy the numbers at the top, for example <code>51.0543, 3.7174</code>.
+                    Pick the spot on the map below and copy the coordinates, or long-press it in Google Maps and copy the numbers at the top,
+                    for example <code>51.0543, 3.7174</code>.
                 </li>
                 <li>
                     <span class="font-semibold text-gray-900">Not at home.</span>
@@ -133,6 +134,13 @@
                     Don't send photos where other people's faces can be recognised.
                 </li>
             </ul>
+            <div id="sticker-photo-picker" class="sticker-map sticker-map--picker mt-10" aria-label="Map to pick the coordinates of your sticker">
+                <p class="sticker-map-placeholder">Loading map…</p>
+            </div>
+            <div id="sticker-photo-picker-readout" class="sticker-picker-readout">
+                <span class="sticker-picker-coordinates" data-coordinates aria-live="polite">Click the map to place a pin on your sticker's spot.</span>
+                <button type="button" class="btn btn-outline px-4 py-2" data-copy disabled>Copy coordinates</button>
+            </div>
             <iframe data-tally-src="https://tally.so/embed/kbNXLZ?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;dynamicHeight=1"
                     loading="lazy" width="100%" height="500" frameborder="0" title="Sticker photo form" class="mt-10"></iframe>
         </div>
@@ -206,5 +214,6 @@
     </footer>
     <script defer src="assets/js/github-stars.js?v=d171bc3d"></script>
     <script async src="https://tally.so/widgets/embed.js" onload="Tally.loadEmbeds()"></script>
+    <script defer src="assets/js/sticker-photo-picker.js?v=126bb4c8"></script>
 </body>
 </html>

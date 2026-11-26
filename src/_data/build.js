@@ -10,5 +10,6 @@ module.exports = {
     jsVersions: {
         githubStars: version("assets/js/github-stars.js"),
         stickerMap: version("assets/js/sticker-map.js"),
+        stickerPhotoPicker: version("assets/js/sticker-photo-picker.js"),
     },
 };

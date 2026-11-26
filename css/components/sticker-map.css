@@ -11,6 +11,10 @@
         @apply h-full;
     }
 
+    .sticker-map--picker {
+        @apply h-80 md:h-96 rounded-xl ring-1 ring-gray-200;
+    }
+
     .sticker-map-card {
         @apply absolute top-3 left-3 z-10 max-w-[calc(100%-1.5rem)] rounded-xl bg-white/95 p-4 shadow-lg ring-1 ring-gray-200 backdrop-blur;
     }
@@ -51,5 +55,22 @@
         time {
             @apply block text-xs text-gray-500;
         }
+    }
+
+    /* MapLibre positions the marker with a transform on this element, so it must not get its own transform or rotate. */
+    .sticker-picker-pin {
+        @apply block w-6 h-8 cursor-grab;
+
+        svg {
+            @apply block drop-shadow-md;
+        }
+    }
+
+    .sticker-picker-readout {
+        @apply mt-3 flex flex-wrap items-center justify-between gap-3 text-sm text-gray-500;
+    }
+
+    .sticker-picker-coordinates.is-set {
+        @apply font-mono font-semibold text-gray-900;
     }
 }
